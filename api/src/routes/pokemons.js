@@ -13,12 +13,21 @@ router.get("/", (req, res, next) => {
                 .then(nextResp => {
                     const secondGet = nextResp.data.results;
                     const allPokemonsRaw = firstGet.concat(secondGet);
-                    for (let i = 0; i < allPokemonsRaw.length; i++) {
-                        axios.get(allPokemonsRaw[i].url)
-                            .then(infoResp => {
-                                res.json(infoResp.data)
-                            })
-                    }
+                    let listURl = allPokemonsRaw.map(p => p.url);
+                    let listPromises = listURl.map(url => axios.get(url));
+                    Promise.all(listPromises)
+                        .then(finalResp => {
+                            let allPokesData = finalResp.map(p => p.data);
+                            let finalData = [];
+                            for (let i = 0; i < allPokesData.length; i++) {
+                                let name = allPokesData[i].name;
+                                //finalResp[i].types
+                                let types = allPokesData[i].types.map(t => t.type.name);
+                                let img = allPokesData[i].sprites.other['official-artwork'].front_default;
+                                finalData.push({ name, types, img })
+                            }
+                            return res.json(finalData)
+                        })
                 })
                 .catch(err => {
                     res.send(err)
