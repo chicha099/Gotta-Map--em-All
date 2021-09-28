@@ -45,6 +45,9 @@ router.get("/", (req, res, next) => {
         });
 });
 
+router.get("/{idPokemon}", (req, res, next) => {
+    axios.get('https://pokeapi.co/api/v2/pokemon/{id}')
+})
 
 
 module.exports = router;
