@@ -4,9 +4,20 @@ const { Pokemon } = require("../db.js");
 
 const router = Router();
 
-router.get("/", (req, res, next) => {
+router.get("/", (req, res) => {
     const { name } = req.query;
     if (name) {
+        Pokemon.findOne({
+            where: { Nombre: name }
+        })
+            .then(respDb => {
+                if (respDb) {
+                    return res.json(respDb)
+                }
+            })
+            .catch(err => {
+                res.send(err)
+            });
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then(resp => {
                 let finalDetailed = [];
@@ -25,6 +36,9 @@ router.get("/", (req, res, next) => {
                 });
                 return res.send(finalDetailed)
             })
+            .catch(err => {
+                res.send(err)
+            });
     };
     axios.get('https://pokeapi.co/api/v2/pokemon')
         .then(resp => {
@@ -66,28 +80,46 @@ router.get("/", (req, res, next) => {
         });
 });
 
-router.get("/:id", (req, res, next) => {
+router.get("/:id", (req, res) => {
     const { id } = req.params;
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        .then(resp => {
-            let finalDetailed = [];
-            let infoRaw = resp.data;
-            finalDetailed.push({
-                Name: infoRaw.name,
-                Types: infoRaw.types.map(t => t.type.name),
-                Img: infoRaw.sprites.other['official-artwork'].front_default,
-                Hp: infoRaw.stats[0].base_stat,
-                Force: infoRaw.stats[1].base_stat,
-                Defense: infoRaw.stats[2].base_stat,
-                Speed: infoRaw.stats[5].base_stat,
-                Id: infoRaw.id,
-                Weight: infoRaw.weight,
-                Height: infoRaw.height,
+
+    if (id.length < 10) {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+            .then(resp => {
+                let finalDetailed = [];
+                let infoRaw = resp.data;
+                finalDetailed.push({
+                    name: infoRaw.name,
+                    types: infoRaw.types.map(t => t.type.name),
+                    img: infoRaw.sprites.other['official-artwork'].front_default,
+                    hp: infoRaw.stats[0].base_stat,
+                    force: infoRaw.stats[1].base_stat,
+                    defense: infoRaw.stats[2].base_stat,
+                    speed: infoRaw.stats[5].base_stat,
+                    id: infoRaw.id,
+                    weight: infoRaw.weight,
+                    height: infoRaw.height,
+                });
+                return res.send(finalDetailed)
+            })
+            .catch(err => {
+                res.send(err)
             });
-            res.send(finalDetailed)
-        })
+    }
+    else {
+        Pokemon.findByPk(id)
+            .then(resp => {
+                return res.json(resp);
+            })
+            .catch(err => {
+                res.send(err)
+            });
+    }
+
 });
 
-
+router.post('/', (req, res) => {
+    Pokemon.create(req.body)
+})
 
 module.exports = router;
