@@ -7,7 +7,7 @@ export default function LandingPage() {
         <div className='Landing'>
             <div className='Container'>
                 <div className='Title'>
-                    <h1>PAGINA DE MIERDA DE POKEMON</h1>
+                    <h1>PAGINA HENRY DE POKEMON</h1>
                 </div>
                 <div className='ButtonDiv'>
                     <Link to='/home'>
