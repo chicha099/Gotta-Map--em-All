@@ -5,6 +5,27 @@ const { Pokemon } = require("../db.js");
 const router = Router();
 
 router.get("/", (req, res, next) => {
+    const { name } = req.query;
+    if (name) {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
+            .then(resp => {
+                let finalDetailed = [];
+                let infoRaw = resp.data;
+                finalDetailed.push({
+                    Name: infoRaw.name,
+                    Types: infoRaw.types.map(t => t.type.name),
+                    Img: infoRaw.sprites.other['official-artwork'].front_default,
+                    Hp: infoRaw.stats[0].base_stat,
+                    Force: infoRaw.stats[1].base_stat,
+                    Defense: infoRaw.stats[2].base_stat,
+                    Speed: infoRaw.stats[5].base_stat,
+                    Id: infoRaw.id,
+                    Weight: infoRaw.weight,
+                    Height: infoRaw.height,
+                });
+                return res.send(finalDetailed)
+            })
+    };
     axios.get('https://pokeapi.co/api/v2/pokemon')
         .then(resp => {
             const next = resp.data.next;
@@ -45,9 +66,28 @@ router.get("/", (req, res, next) => {
         });
 });
 
-router.get("/{idPokemon}", (req, res, next) => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/{id}')
-})
+router.get("/:id", (req, res, next) => {
+    const { id } = req.params;
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .then(resp => {
+            let finalDetailed = [];
+            let infoRaw = resp.data;
+            finalDetailed.push({
+                Name: infoRaw.name,
+                Types: infoRaw.types.map(t => t.type.name),
+                Img: infoRaw.sprites.other['official-artwork'].front_default,
+                Hp: infoRaw.stats[0].base_stat,
+                Force: infoRaw.stats[1].base_stat,
+                Defense: infoRaw.stats[2].base_stat,
+                Speed: infoRaw.stats[5].base_stat,
+                Id: infoRaw.id,
+                Weight: infoRaw.weight,
+                Height: infoRaw.height,
+            });
+            res.send(finalDetailed)
+        })
+});
+
 
 
 module.exports = router;
