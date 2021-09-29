@@ -1,0 +1,53 @@
+.Landing {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://free4kwallpapers.com/uploads/originals/2018/06/18/created-a-3d-render-of-a-pokemon-trophy-in-the-grass-wallpaper.jpg');
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10%;
+}
+
+@font-face {
+    font-family: 'gba';
+    src: url(pokemon_gb-webfont.woff);
+    font-style: normal;
+    font-weight: 100;
+  }
+
+.Title {
+    font-family: gba;
+    padding-bottom: 5%;
+    color: white;
+    font-size: xx-large;
+    -webkit-text-stroke: 1px black;
+}
+
+.ButtonDiv {
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+    height: 10%;
+    width: 20%;
+    margin: 0 auto 0 auto;
+    border: 1px double black;
+}
+
+.Button {
+    font-family: gba;
+    font-size: xx-large;
+    height: 100%;
+    width: 100%;
+}
+
+
+  
