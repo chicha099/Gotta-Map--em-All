@@ -18,7 +18,7 @@ router.get("/", (req, res) => {
                 .then(respCheck => {
                     let tableCheck = respCheck;
                     if (!tableCheck.length) {
-                        Tipo.bulkCreate(allTypesFinal)
+                        Tipo.bulkCreate(allTypesFinal);
                     }
                 })
                 .catch(err => {

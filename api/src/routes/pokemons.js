@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const axios = require('axios');
-const { Pokemon } = require("../db.js");
+const { Pokemon, Tipo } = require("../db.js");
 
 const router = Router();
 
@@ -119,7 +119,33 @@ router.get("/:id", (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    Pokemon.create(req.body)
+    const {
+        Nombre,
+        Vida,
+        Fuerza,
+        Defensa,
+        Velocidad,
+        Peso,
+        Altura,
+        Imagen,
+        Tipos
+    } = req.body;
+
+    Pokemon.create({
+        Nombre,
+        Vida,
+        Fuerza,
+        Defensa,
+        Velocidad,
+        Peso,
+        Altura,
+        Imagen
+    })
+        .then(pokemon => {
+            pokemon.addTipos(Tipos).then(() => {
+                res.send("OK")
+            });
+        });
 })
 
 module.exports = router;
