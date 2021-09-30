@@ -8,7 +8,11 @@ router.get("/", (req, res) => {
     const { name } = req.query;
     if (name) {
         Pokemon.findOne({
-            where: { Nombre: name }
+            where: { Nombre: name },
+            include: {
+                model: Tipo,
+                attributes: ['name']
+            }
         })
             .then(respDb => {
                 if (respDb) {
@@ -64,8 +68,17 @@ router.get("/", (req, res) => {
                                 let img = allPokesData[i].sprites.other['official-artwork'].front_default;
                                 allPokemonsFinal.push({ name, types, img })
                                 //Declaro variables para el nombre, tipos y foto de cada pokemon y las pusheo a un array vacio
+                                Pokemon.findAll({
+                                    include: {
+                                        model: Tipo,
+                                        attributes: ['name']
+                                    }
+                                })
+                                    .then(respDb => {
+                                        let FINAL = allPokemonsFinal.concat(respDb);
+                                        return res.json(FINAL)
+                                    })
                             }
-                            return res.json(allPokemonsFinal)
                         })
                         .catch(err => {
                             res.send(err)
@@ -107,7 +120,17 @@ router.get("/:id", (req, res) => {
             });
     }
     else {
-        Pokemon.findByPk(id)
+        // Pokemon.findByPk(id)
+        //     .then(resp => {
+        //         return res.json(resp);
+        //     })
+        Pokemon.findOne({
+            where: { ID: id },
+            include: {
+                model: Tipo,
+                attributes: ['name']
+            }
+        })
             .then(resp => {
                 return res.json(resp);
             })
@@ -142,9 +165,10 @@ router.post('/', (req, res) => {
         Imagen
     })
         .then(pokemon => {
-            pokemon.addTipos(Tipos).then(() => {
-                res.send("OK")
-            });
+            pokemon.addTipos(Tipos)
+                .then(() => {
+                    res.send("OK")
+                });
         });
 })
 
