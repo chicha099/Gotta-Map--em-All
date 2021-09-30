@@ -19,12 +19,25 @@ export default function Sidebar() {
                     allTypes && allTypes.map(t => {
                         console.log(t.name);
                         return (
-                            <div>
-                                <button value={t.name}>{t.name}</button>
+                            <div className='Filter'>
+                                <div>
+                                    <input type="checkbox" id={t.name} name="filters" value={t.name} className='Checkbox' />
+                                </div>
+                                <label for={t.name} >{t.name}</label>
                             </div>
                         )
                     })
                 }
+                <div className='Filter2'>
+                    <div className='OriginalsNCreated'>
+                        <input type="checkbox" id='originals' name="filters" value='originals' />
+                        <label for='originals' >originals</label>
+                    </div>
+                    <div className='OriginalsNCreated'>
+                        <input type="checkbox" id='created' name="filters" value='created' />
+                        <label for='created' >created</label>
+                    </div>
+                </div>
             </div>
         </div>
     )

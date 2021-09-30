@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
         dispatch(getPokemons());
     }, [dispatch]);
-
+    
     function handleClick(e) {
         e.preventDefault();
         dispatch(getPokemons());
@@ -63,6 +63,9 @@ export default function Home() {
                         }
                     </div>
                 </div>
+            </div>
+            <div className='pageMarkers'>
+                1 2 3 4 5 6 7 8 9
             </div>
         </div>
     )

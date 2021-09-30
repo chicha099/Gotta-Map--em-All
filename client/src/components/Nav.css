@@ -3,14 +3,17 @@
     height: 5vh;
     display: flex;
     justify-content: flex-end;
-    width: 99.99%;
+    width: 100%;
     flex-direction: row;
 }
 
 .Input {
-    height: 10px;
+    height: 90%;
+    align-self: center;
 }
 
 .ButtonNav {
     height: 90%;
+    align-self: center;
+    margin-right: 0.1%;
 }

@@ -7,8 +7,11 @@
 .Pokemons {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 5%;
+    margin-left: 10%;
     flex-direction:row;
     column-gap: 1%;
 }
 
+.pageMarkers {
+    border: 1px solid black;
+}
