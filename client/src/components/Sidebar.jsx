@@ -17,25 +17,29 @@ export default function Sidebar() {
             <div>
                 {
                     allTypes && allTypes.map(t => {
-                        console.log(t.name);
+                        let typeF = t.name[0].toUpperCase() + t.name.slice(1);
                         return (
                             <div className='Filter'>
                                 <div>
-                                    <input type="checkbox" id={t.name} name="filters" value={t.name} className='Checkbox' />
+                                    <input type="checkbox" id={typeF} name="filters" value={typeF} className='Checkbox' />
                                 </div>
-                                <label for={t.name} >{t.name}</label>
+                                <label for={typeF} className='Label'>{typeF}</label>
                             </div>
                         )
                     })
                 }
                 <div className='Filter2'>
                     <div className='OriginalsNCreated'>
-                        <input type="checkbox" id='originals' name="filters" value='originals' />
-                        <label for='originals' >originals</label>
+                        <div className='Checkbox'>
+                            <input type="checkbox" id='originals' name="filters" value='originals' />
+                        </div>
+                        <label for='originals' className='Label'>Originals</label>
                     </div>
-                    <div className='OriginalsNCreated'>
-                        <input type="checkbox" id='created' name="filters" value='created' />
-                        <label for='created' >created</label>
+                    <div className='OriginalsNCreated' id='CreatedDiv'>
+                        <div className='Checkbox'>
+                            <input type="checkbox" id='created' name="filters" value='created' />
+                        </div>
+                        <label for='created' className='Label' >Created</label>
                     </div>
                 </div>
             </div>

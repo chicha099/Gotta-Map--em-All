@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
         dispatch(getPokemons());
     }, [dispatch]);
-    
+
     function handleClick(e) {
         e.preventDefault();
         dispatch(getPokemons());

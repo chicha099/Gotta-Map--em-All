@@ -18,8 +18,12 @@ router.get("/", (req, res) => {
                 .then(respCheck => {
                     let tableCheck = respCheck;
                     if (!tableCheck.length) {
-                        Tipo.bulkCreate(allTypesFinal);
+                        Tipo.bulkCreate(allTypesFinal)
+                            .then(typesInDb => {
+                                return res.json(typesInDb);
+                            })
                     }
+                    return res.json(respCheck);
                 })
                 .catch(err => {
                     res.send(err)
