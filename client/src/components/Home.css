@@ -4,3 +4,11 @@
     width: 100%;
 }
 
+.Pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+    flex-direction:row;
+    column-gap: 1%;
+}
+

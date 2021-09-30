@@ -8,7 +8,7 @@ export default function Card({ name, types, img }) {
     return (
         <div className='cardDiv'>
             <div className='Card'>
-                <img src={img} alt="img not found" width="200px" height="200px" />
+                <img src={img} alt="img not found" width="150px" height="150px" />
                 <h5>{name}</h5>
                 <h6>{type1} {type2}</h6>
             </div>

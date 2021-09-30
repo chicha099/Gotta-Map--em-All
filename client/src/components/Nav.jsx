@@ -4,7 +4,8 @@ import './Nav.css';
 export default function Nav() {
     return (
         <div className='NavDiv'>
-            <h1>ESTE ES EL NAV</h1>
+            <input type="search" className='Input' />
+            <button className='ButtonNav'>Search</button>
         </div>
     )
 };

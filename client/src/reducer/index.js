@@ -1,6 +1,7 @@
 
 const initialState = {
-    pokemons: []
+    pokemons: [],
+    types: []
 }
 
 function rootReducer(state = initialState, action) {
@@ -9,6 +10,11 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 pokemons: action.payload
+            }
+        case 'GET_TYPES':
+            return {
+                ...state,
+                types: action.payload
             }
         default:
             return state;

@@ -23,26 +23,21 @@ export default function Home() {
 
     return (
         <div>
-            <div id='nav'>
-                <Nav />
-            </div>
+            <Nav />
             <div id='main' className='MainDiv'>
-                <div className='SidebarDiv'>
-                    <Sidebar />
-                </div>
+                <Sidebar />
                 <div>
+                    <select>
+                        <option value="alpha-Asc">A-Z</option>
+                        <option value="alpha-Desc">Z-A</option>
+                        <option value="fuerza-Asc">Fuerza Asc</option>
+                        <option value="fuerza-Desc">Fuerza Desc</option>
+                    </select>
                     <button onClick={e => { handleClick(e) }}>
                         Load Pokemons Again
                     </button>
-                    <div>
+                    <div id="pokemons" className='Pokemons'>
                         {
-                            // allPokemons && allPokemons.map(p => {
-                            //     return (
-                            //         <div>
-                            //             <Card name={p.name} types={p.types} img={p.img} />
-                            //         </div>
-                            //     )
-                            // })
                             allPokemons && allPokemons.map(p => {
                                 if (p.types) {
                                     return (

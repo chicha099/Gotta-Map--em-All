@@ -11,3 +11,15 @@ export function getPokemons() {
             })
     }
 }
+
+export function getTypes() {
+    return function (dispatch) {
+        axios.get('http://localhost:3001/types')
+            .then(resp => {
+                return dispatch({
+                    type: 'GET_TYPES',
+                    payload: resp.data
+                })
+            })
+    }
+}
