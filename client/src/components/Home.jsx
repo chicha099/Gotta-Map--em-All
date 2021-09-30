@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Card from './Card';
 import Nav from './Nav';
 import Sidebar from './Sidebar';
-import './Home.css'
+import './Home.css';
 
 export default function Home() {
     const dispatch = useDispatch();
@@ -36,12 +36,34 @@ export default function Home() {
                     </button>
                     <div>
                         {
+                            // allPokemons && allPokemons.map(p => {
+                            //     return (
+                            //         <div>
+                            //             <Card name={p.name} types={p.types} img={p.img} />
+                            //         </div>
+                            //     )
+                            // })
                             allPokemons && allPokemons.map(p => {
-                                return (
-                                    <div>
-                                        <Card name={p.name} types={p.types} img={p.img} />
-                                    </div>
-                                )
+                                if (p.types) {
+                                    return (
+                                        <div>
+                                            <Card name={p.name} types={p.types} img={p.img} />
+                                        </div>
+                                    )
+                                }
+                                else {
+                                    let nameDb = p.Nombre;
+                                    let typesDb = [];
+                                    let imgDb = p.Imagen;
+                                    p.tipos.forEach(t => {
+                                        typesDb.push(t.name)
+                                    });
+                                    return (
+                                        <div>
+                                            <Card name={nameDb} types={typesDb} img={imgDb} />
+                                        </div>
+                                    )
+                                }
                             })
                         }
                     </div>

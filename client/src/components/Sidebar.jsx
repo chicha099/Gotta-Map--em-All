@@ -4,7 +4,16 @@ import './Sidebar.css';
 export default function Sidebar() {
     return (
         <div className='SidebarDiv'>
-            <h1>SIDEBAR</h1>
+            <select>
+                <option value="alpha-Asc">A-Z</option>
+                <option value="alpha-Desc">Z-A</option>
+                <option value="fuerza-Asc">Fuerza Asc</option>
+                <option value="fuerza-Desc">Fuerza Desc</option>
+            </select>
+            <select>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
         </div>
     )
 };
