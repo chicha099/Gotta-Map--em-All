@@ -1,8 +1,9 @@
 .MainDiv {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 91%;
     padding-top: 3%;
+    margin-left: 10%;
 }
 
 .Pokemons {
@@ -11,6 +12,7 @@
     margin-left: 10%;
     flex-direction:row;
     column-gap: 1%;
+    width: 53%;
 }
 
 .pageMarkers {

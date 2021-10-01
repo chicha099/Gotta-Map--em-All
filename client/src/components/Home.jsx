@@ -13,7 +13,7 @@ export default function Home() {
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(9);
     const lastPokemonIndex = currentPage * pokemonsPerPage;
     const firstPokemonIndex = lastPokemonIndex - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(firstPokemonIndex, lastPokemonIndex)
