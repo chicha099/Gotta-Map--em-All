@@ -1,0 +1,12 @@
+.Pages {
+    display: flex;
+    justify-content: center;
+    row-gap: 5%;
+    column-gap: 0.1%;
+}
+
+.Page {
+    border: 1px solid brown;
+    border-radius: 30%;
+    width: 200%;
+}

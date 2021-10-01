@@ -6,11 +6,21 @@ import { Link } from 'react-router-dom';
 import Card from './Card';
 import Nav from './Nav';
 import Sidebar from './Sidebar';
+import Pagination from './Pages';
 import './Home.css';
 
 export default function Home() {
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
+    const lastPokemonIndex = currentPage * pokemonsPerPage;
+    const firstPokemonIndex = lastPokemonIndex - pokemonsPerPage;
+    const currentPokemons = allPokemons.slice(firstPokemonIndex, lastPokemonIndex)
+
+    const pages = (pageNumber) => {
+        setCurrentPage(pageNumber)
+    }
 
     useEffect(() => {
         dispatch(getPokemons());
@@ -38,7 +48,7 @@ export default function Home() {
                     </button>
                     <div id="pokemons" className='Pokemons'>
                         {
-                            allPokemons && allPokemons.map(p => {
+                            currentPokemons && currentPokemons.map(p => {
                                 if (p.types) {
                                     return (
                                         <div>
@@ -64,8 +74,12 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className='pageMarkers'>
-                1 2 3 4 5 6 7 8 9
+            <div>
+                <Pagination
+                    pokemonsPerPage={pokemonsPerPage}
+                    allPokemons={allPokemons.length}
+                    pages={pages}
+                />
             </div>
         </div>
     )

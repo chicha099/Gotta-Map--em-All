@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
                 }
             })
             .catch(err => {
-                res.send(err)
+                return res.send(err)
             });
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}`)
             .then(resp => {
@@ -41,7 +41,7 @@ router.get("/", (req, res) => {
                 return res.send(finalDetailed)
             })
             .catch(err => {
-                res.send(err)
+                return res.send(err)
             });
     };
     axios.get('https://pokeapi.co/api/v2/pokemon')
@@ -81,15 +81,15 @@ router.get("/", (req, res) => {
                             }
                         })
                         .catch(err => {
-                            res.send(err)
+                            return res.send(err)
                         });
                 })
                 .catch(err => {
-                    res.send(err)
+                    return res.send(err)
                 });
         })
         .catch(err => {
-            res.send(err)
+            return res.send(err)
         });
 });
 
@@ -116,7 +116,7 @@ router.get("/:id", (req, res) => {
                 return res.send(finalDetailed)
             })
             .catch(err => {
-                res.send(err)
+                return res.send(err)
             });
     }
     else {
@@ -135,7 +135,7 @@ router.get("/:id", (req, res) => {
                 return res.json(resp);
             })
             .catch(err => {
-                res.send(err)
+                return res.send(err)
             });
     }
 
@@ -167,7 +167,7 @@ router.post('/', (req, res) => {
         .then(pokemon => {
             pokemon.addTipos(Tipos)
                 .then(() => {
-                    res.send("OK")
+                    return res.send("OK")
                 });
         });
 })

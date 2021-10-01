@@ -26,11 +26,11 @@ router.get("/", (req, res) => {
                     return res.json(respCheck);
                 })
                 .catch(err => {
-                    res.send(err)
+                    return res.send(err)
                 });
         })
         .catch(err => {
-            res.send(err)
+            return res.send(err)
         });
 })
 
