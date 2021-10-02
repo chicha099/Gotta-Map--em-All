@@ -30,3 +30,17 @@ export function filterPokemonsByType(payload) {
         payload
     }
 }
+
+export function filterPokemonsByOrigin(payload) {
+    return {
+        type: 'FILTER_BY_ORIGIN',
+        payload
+    }
+}
+
+export function orderPokemonsByName(payload) {
+    return {
+        type: 'ORDER_BY_NAME',
+        payload
+    }
+}

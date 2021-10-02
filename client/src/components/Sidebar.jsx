@@ -1,7 +1,7 @@
 import react from 'react';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getTypes } from '../actions';
+import { filterPokemonsByOrigin, getTypes } from '../actions';
 import { filterPokemonsByType } from '../actions';
 import './Sidebar.css';
 
@@ -14,8 +14,12 @@ export default function Sidebar() {
     }, [dispatch]);
 
     function handleFilterTypes(e) {
+        // setCurrentPage(1);
         dispatch(filterPokemonsByType(e.target.value));
-        e.value = ''
+    }
+
+    function handleFilterOrigin(e) {
+        dispatch(filterPokemonsByOrigin(e.target.value));
     }
 
     return (
@@ -43,13 +47,13 @@ export default function Sidebar() {
                     </div>
                     <div className='OriginalsNCreated'>
                         <div >
-                            <button id='originals' name="filters" value='originals' className='ButtonFilterOther' />
+                            <button id='originals' name="filters" value='types' className='ButtonFilterOther' onClick={e => handleFilterOrigin(e)} />
                         </div>
                         <label for='originals' className='Label'>Originals</label>
                     </div>
                     <div className='OriginalsNCreated' id='CreatedDiv'>
                         <div >
-                            <button id='created' name="filters" value='created' className='ButtonFilterOther' />
+                            <button id='created' name="filters" value='tipos' className='ButtonFilterOther' onClick={e => handleFilterOrigin(e)} />
                         </div>
                         <label for='created' className='Label' >Created</label>
                     </div>

@@ -1,7 +1,7 @@
 import react from 'react';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPokemons } from '../actions';
+import { getPokemons, orderPokemonsByName } from '../actions';
 import { Link } from 'react-router-dom';
 import Card from './Card';
 import Nav from './Nav';
@@ -31,13 +31,17 @@ export default function Home() {
         dispatch(getPokemons());
     }
 
+    function handleOrderByName(e) {
+        dispatch(orderPokemonsByName(e.target.value));
+    }
+
     return (
         <div>
             <Nav />
             <div id='main' className='MainDiv'>
                 <Sidebar />
                 <div>
-                    <select>
+                    <select onChange={e => handleOrderByName(e)}>
                         <option value="alpha-Asc">A-Z</option>
                         <option value="alpha-Desc">Z-A</option>
                         <option value="fuerza-Asc">Fuerza Asc</option>
@@ -61,6 +65,7 @@ export default function Home() {
                                     let typesDb = [];
                                     let imgDb = p.Imagen;
                                     p.tipos.forEach(t => {
+
                                         typesDb.push(t.name)
                                     });
                                     return (
