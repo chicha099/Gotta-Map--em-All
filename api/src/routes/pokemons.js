@@ -27,16 +27,16 @@ router.get("/", (req, res) => {
                 let finalDetailed = [];
                 let infoRaw = resp.data;
                 finalDetailed.push({
-                    Name: infoRaw.name,
-                    Types: infoRaw.types.map(t => t.type.name),
-                    Img: infoRaw.sprites.other['official-artwork'].front_default,
-                    Hp: infoRaw.stats[0].base_stat,
-                    Force: infoRaw.stats[1].base_stat,
-                    Defense: infoRaw.stats[2].base_stat,
-                    Speed: infoRaw.stats[5].base_stat,
-                    Id: infoRaw.id,
-                    Weight: infoRaw.weight,
-                    Height: infoRaw.height,
+                    name: infoRaw.name,
+                    types: infoRaw.types.map(t => t.type.name),
+                    img: infoRaw.sprites.other['official-artwork'].front_default,
+                    hp: infoRaw.stats[0].base_stat,
+                    force: infoRaw.stats[1].base_stat,
+                    defense: infoRaw.stats[2].base_stat,
+                    speed: infoRaw.stats[5].base_stat,
+                    id: infoRaw.id,
+                    weight: infoRaw.weight,
+                    height: infoRaw.height,
                 });
                 return res.send(finalDetailed)
             })

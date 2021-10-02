@@ -18,3 +18,9 @@
 .pageMarkers {
     border: 1px solid black;
 }
+
+.Font {
+    font-family: gba;
+    font-size: small;
+    height: 3%;
+}

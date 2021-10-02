@@ -51,3 +51,15 @@ export function orderPokemonsByForce(payload) {
         payload
     }
 }
+
+export function searchName(name) {
+    return function (dispatch) {
+        axios.get(`http://localhost:3001/pokemons?name=${name}`)
+            .then(resp => {
+                return dispatch({
+                    type: 'SEARCH_NAME',
+                    payload: resp.data
+                })
+            })
+    }
+}

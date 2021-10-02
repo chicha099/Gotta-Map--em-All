@@ -73,44 +73,49 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 pokemons: orderedNames
             };
-            //FUERZA
-            case 'ORDER_BY_FORCE':
-                const allOrderedByForce = state.pokemons;
-                const allOgByForce = allOrderedByForce.filter(p => p.types);
-                const allCtByForceRaw = allOrderedByForce.filter(p => p.tipos);
-                const allCtByForceFixed = [];
-                allCtByForceRaw.forEach(p => {
-                    allCtByForceFixed.push({
-                        name: p.Nombre,
-                        img: p.Imagen,
-                        types: [p.tipos[0].name, p.tipos[1].name],
-                        force: p.Fuerza
-                    })
-                });
-                let finalOrderedF = allOgByForce.concat(allCtByForceFixed);
-                let orderedForces = action.payload === 'force-Asc' ?
-                    finalOrderedF.sort(function (a, b) {
-                        if (a.force > b.force) {
-                            return 1;
-                        }
-                        if (b.force > a.force) {
-                            return -1;
-                        }
-                        return 0;
-                    }) :
-                    finalOrderedF.sort(function (a, b) {
-                        if (a.force > b.force) {
-                            return -1;
-                        }
-                        if (b.force > a.force) {
-                            return 1;
-                        }
-                        return 0;
-                    })
-                return {
-                    ...state,
-                    pokemons: orderedForces
-                };
+        //FUERZA
+        case 'ORDER_BY_FORCE':
+            const allOrderedByForce = state.pokemons;
+            const allOgByForce = allOrderedByForce.filter(p => p.types);
+            const allCtByForceRaw = allOrderedByForce.filter(p => p.tipos);
+            const allCtByForceFixed = [];
+            allCtByForceRaw.forEach(p => {
+                allCtByForceFixed.push({
+                    name: p.Nombre,
+                    img: p.Imagen,
+                    types: [p.tipos[0].name, p.tipos[1].name],
+                    force: p.Fuerza
+                })
+            });
+            let finalOrderedF = allOgByForce.concat(allCtByForceFixed);
+            let orderedForces = action.payload === 'force-Asc' ?
+                finalOrderedF.sort(function (a, b) {
+                    if (a.force > b.force) {
+                        return 1;
+                    }
+                    if (b.force > a.force) {
+                        return -1;
+                    }
+                    return 0;
+                }) :
+                finalOrderedF.sort(function (a, b) {
+                    if (a.force > b.force) {
+                        return -1;
+                    }
+                    if (b.force > a.force) {
+                        return 1;
+                    }
+                    return 0;
+                })
+            return {
+                ...state,
+                pokemons: orderedForces
+            };
+        case 'SEARCH_NAME':
+            return {
+                ...state,
+                pokemons: action.payload
+            };
         default:
             return state;
     }

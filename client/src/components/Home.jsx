@@ -16,7 +16,7 @@ export default function Home() {
     const [pokemonsPerPage, setPokemonsPerPage] = useState(9);
     const lastPokemonIndex = currentPage * pokemonsPerPage;
     const firstPokemonIndex = lastPokemonIndex - pokemonsPerPage;
-    const currentPokemons = allPokemons.slice(firstPokemonIndex, lastPokemonIndex)
+    const currentPokemons = Array.isArray(allPokemons) ? allPokemons.slice(firstPokemonIndex, lastPokemonIndex) : [allPokemons];
 
     const pages = (pageNumber) => {
         setCurrentPage(pageNumber)
@@ -45,13 +45,13 @@ export default function Home() {
             <div id='main' className='MainDiv'>
                 <Sidebar />
                 <div>
-                    <select onChange={e => handleOrderByName(e)}>
+                    <select onChange={e => handleOrderByName(e)} className='Font'>
                         <option value="alpha-Asc">A-Z</option>
                         <option value="alpha-Desc">Z-A</option>
                     </select>
-                    <select onChange={e => handleOrderByForce(e)}>
-                        <option value="force-Asc">Force Asc</option>
-                        <option value="force-Desc">Force Desc</option>
+                    <select onChange={e => handleOrderByForce(e)} className='Font'>
+                        <option value="force-Asc">FORCE ASC</option>
+                        <option value="force-Desc">FORCE DESC</option>
                     </select>
                     <button onClick={e => { handleClick(e) }}>
                         Load Pokemons Again
