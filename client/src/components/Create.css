@@ -27,9 +27,14 @@
 
 .typeInputs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 30.4%;
 }
 
 .sInput {
     margin-top: 2%;
+}
+
+.Options {
+    width: 100%;
 }

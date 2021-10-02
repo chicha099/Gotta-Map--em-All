@@ -1,8 +1,14 @@
 import React from "react";
 import Nav from './Nav';
 import './Create.css'
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getTypes } from "../actions";
 
 export default function Detail() {
+
+    const dispatch = useDispatch();
+    const allTypes = useSelector((state) => state.types);
 
     const [input, setInput] = React.useState({
         Nombre: '',
@@ -15,6 +21,10 @@ export default function Detail() {
         Peso: 0,
         Altura: 0
     });
+
+    useEffect(() => {
+        dispatch(getTypes());
+    }, [dispatch]);
 
     return (
         <div id='mainCreate' className='mainCreate'>
@@ -29,8 +39,26 @@ export default function Detail() {
                     <div className='InputsCreate'>
                         <label>Types:</label>
                         <div className='typeInputs'>
-                            <input />
-                            <input className='sInput'/>
+                            <select className='Options'>
+                                {
+                                    allTypes && allTypes.map(t => {
+                                        let typeF = t.name[0].toUpperCase() + t.name.slice(1);
+                                        return (
+                                            <option value={t.name}>{typeF}</option>
+                                        )
+                                    })
+                                }
+                            </select>
+                            <select className='Options'>
+                                {
+                                    allTypes && allTypes.map(t => {
+                                        let typeF = t.name[0].toUpperCase() + t.name.slice(1);
+                                        return (
+                                            <option value={t.name}>{typeF}</option>
+                                        )
+                                    })
+                                }
+                            </select>
                         </div>
                     </div>
                     <div className='InputsCreate'>
