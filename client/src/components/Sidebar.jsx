@@ -14,7 +14,7 @@ export default function Sidebar() {
     }, [dispatch]);
 
     function handleFilterTypes(e) {
-        // setCurrentPage(1);
+        //reset pages!!!!
         dispatch(filterPokemonsByType(e.target.value));
     }
 

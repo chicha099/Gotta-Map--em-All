@@ -44,3 +44,10 @@ export function orderPokemonsByName(payload) {
         payload
     }
 }
+
+export function orderPokemonsByForce(payload) {
+    return {
+        type: 'ORDER_BY_FORCE',
+        payload
+    }
+}

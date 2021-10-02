@@ -1,7 +1,7 @@
 import react from 'react';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPokemons, orderPokemonsByName } from '../actions';
+import { getPokemons, orderPokemonsByName, orderPokemonsByForce } from '../actions';
 import { Link } from 'react-router-dom';
 import Card from './Card';
 import Nav from './Nav';
@@ -35,6 +35,10 @@ export default function Home() {
         dispatch(orderPokemonsByName(e.target.value));
     }
 
+    function handleOrderByForce(e) {
+        dispatch(orderPokemonsByForce(e.target.value));
+    }
+
     return (
         <div>
             <Nav />
@@ -44,8 +48,10 @@ export default function Home() {
                     <select onChange={e => handleOrderByName(e)}>
                         <option value="alpha-Asc">A-Z</option>
                         <option value="alpha-Desc">Z-A</option>
-                        <option value="fuerza-Asc">Fuerza Asc</option>
-                        <option value="fuerza-Desc">Fuerza Desc</option>
+                    </select>
+                    <select onChange={e => handleOrderByForce(e)}>
+                        <option value="force-Asc">Force Asc</option>
+                        <option value="force-Desc">Force Desc</option>
                     </select>
                     <button onClick={e => { handleClick(e) }}>
                         Load Pokemons Again
