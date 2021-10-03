@@ -3,7 +3,7 @@ import Nav from './Nav';
 import './Create.css'
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getTypes } from "../actions";
+import { getTypes, postPokemon } from "../actions";
 
 export default function Detail() {
 
@@ -12,7 +12,7 @@ export default function Detail() {
 
     const [input, setInput] = React.useState({
         Nombre: '',
-        Tipos: ['normal', 'normal'],
+        Tipos: [],
         Imagen: '',
         Vida: 0,
         Fuerza: 0,
@@ -52,10 +52,11 @@ export default function Detail() {
         console.log(input)
     };
 
-    // function handleOnChangeSelect(e) {
-    //     e.preventDefault();
+    function handlePost(e){
+        e.preventDefault();
+        dispatch(postPokemon(input))
+    }
 
-    // }
     useEffect(() => {
         dispatch(getTypes());
     }, [dispatch]);
@@ -125,7 +126,7 @@ export default function Detail() {
                         <input type="number" name="Altura" onChange={(e => handleOnChange(e))} value={input.Altura} />
                     </div>
                     <div >
-                        <button type="submit">Create</button>
+                        <button type="submit" onClick={(e => handlePost(e))}>Create</button>
                     </div>
                 </form>
             </div>

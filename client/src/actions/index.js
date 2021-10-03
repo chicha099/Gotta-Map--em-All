@@ -63,3 +63,12 @@ export function searchName(name) {
             })
     }
 }
+
+export function postPokemon(payload){
+    return function(dispatch){
+        axios.post('http://localhost:3001/pokemons', payload)
+        .then(resp => {
+            return resp;
+        })
+    }
+}

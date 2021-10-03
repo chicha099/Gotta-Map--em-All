@@ -116,6 +116,10 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 pokemons: action.payload
             };
+            case 'POST_POKEMON':
+                return {
+                    ...state
+                }
         default:
             return state;
     }
