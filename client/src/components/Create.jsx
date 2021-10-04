@@ -4,10 +4,11 @@ import './Create.css'
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { getTypes, postPokemon } from "../actions";
-
+import { useHistory } from "react-router";
 
 export default function Detail() {
 
+    const history = useHistory();
     const dispatch = useDispatch();
     const allTypes = useSelector((state) => state.types);
     const [errors, setErrors] = useState({
@@ -67,15 +68,12 @@ export default function Detail() {
         switch (name) {
             case 'Nombre':
                 value.length < 1 ? setErrors({ ...errors, [name]: 'A name is required!' }) : setErrors({ ...errors, [name]: '' });
-                // errors.Nombre = value.length < 1 ? 'Name is required' : '';
                 break;
             case 'Imagen':
                 value.slice(0, 4) !== 'http' ? setErrors({ ...errors, [name]: 'A valid url is required!' }) : setErrors({ ...errors, [name]: '' });
-                // errors.Imagen = value.slice(0, 4) !== 'http' ? 'Image is required' : '';
                 break;
             case 'Tipos':
                 input.Tipos.length !== 2 ? setErrors({ ...errors, [name]: 'Both types are required!' }) : setErrors({ ...errors, [name]: '' });
-                // errors.Tipos = input.Tipos.length !== 2 ? 'Types are required' : '';
                 break;
             default:
                 break;
@@ -87,6 +85,7 @@ export default function Detail() {
         e.preventDefault();
         dispatch(postPokemon(input))
         alert("Pokemon succesfully created")
+        history.push('/home')
     }
 
     useEffect(() => {

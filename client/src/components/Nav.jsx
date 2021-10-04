@@ -29,7 +29,6 @@ export default function Nav() {
                     <h2>HENRY</h2>
                 </div>
             </Link>
-
             <Link to='/create' className='CreateNav'>
                 <h2> Create </h2>
                 <h2> Pokemon </h2>

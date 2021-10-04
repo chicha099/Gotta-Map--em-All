@@ -72,3 +72,15 @@ export function postPokemon(payload){
         })
     }
 }
+
+export function GetPokemonById(id){
+    return function (dispatch) {
+        axios.get(`http://localhost:3001/pokemons/${id}`)
+            .then(resp => {
+                return dispatch({
+                    type: 'SEARCH_ID',
+                    payload: resp.data
+                })
+            })
+    }
+}

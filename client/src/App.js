@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPage from './components/Landing';
 import Home from './components/Home';
 import Create from './components/Create';
-import Detail from './components/Create';
+import Details from './components/Details';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Route exact path='/' component={LandingPage} />
           <Route path='/home' component={Home} />
           <Route path='/create' component={Create} />
-          <Route path='/pokemon' component={Detail} />
+          <Route path='/pokemon' component={Details} />
         </Switch>
       </div>
     </BrowserRouter>
