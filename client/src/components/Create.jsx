@@ -2,13 +2,25 @@ import React from "react";
 import Nav from './Nav';
 import './Create.css'
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getTypes, postPokemon } from "../actions";
+
 
 export default function Detail() {
 
     const dispatch = useDispatch();
     const allTypes = useSelector((state) => state.types);
+    const [errors, setErrors] = useState({
+        Nombre: '',
+        Tipos: '',
+        Imagen: '',
+        Vida: '',
+        Fuerza: '',
+        Defensa: '',
+        Velocidad: '',
+        Peso: '',
+        Altura: ''
+    });
 
     const [input, setInput] = React.useState({
         Nombre: '',
@@ -27,6 +39,8 @@ export default function Detail() {
         const name = e.target.name;
         let value = e.target.value;
         let id = e.target.id;
+
+
         if (name === 'Tipos' && id === '0') {
             value = [...input.Tipos, value];
             console.log(value)
@@ -49,12 +63,30 @@ export default function Detail() {
             ...input,
             [name]: value
         })
-        console.log(input)
+
+        switch (name) {
+            case 'Nombre':
+                value.length < 1 ? setErrors({ ...errors, [name]: 'A name is required!' }) : setErrors({ ...errors, [name]: '' });
+                // errors.Nombre = value.length < 1 ? 'Name is required' : '';
+                break;
+            case 'Imagen':
+                value.slice(0, 4) !== 'http' ? setErrors({ ...errors, [name]: 'A valid url is required!' }) : setErrors({ ...errors, [name]: '' });
+                // errors.Imagen = value.slice(0, 4) !== 'http' ? 'Image is required' : '';
+                break;
+            case 'Tipos':
+                input.Tipos.length !== 2 ? setErrors({ ...errors, [name]: 'Both types are required!' }) : setErrors({ ...errors, [name]: '' });
+                // errors.Tipos = input.Tipos.length !== 2 ? 'Types are required' : '';
+                break;
+            default:
+                break;
+        }
     };
 
-    function handlePost(e){
+
+    function handlePost(e) {
         e.preventDefault();
         dispatch(postPokemon(input))
+        alert("Pokemon succesfully created")
     }
 
     useEffect(() => {
@@ -68,10 +100,12 @@ export default function Detail() {
                 <h1>Create your own Pokemon!</h1>
                 <form className='Form'>
                     <div className='InputsCreate'>
+                        {!errors.Nombre ? null : <div className='ErrorCreate'>{errors.Nombre}</div>}
                         <label className=''>Name:</label>
                         <input type="text" name="Nombre" onChange={(e => handleOnChange(e))} value={input.Nombre} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Tipos ? null : <div className='ErrorCreate'>{errors.Tipos}</div>}
                         <label>Types:</label>
                         <div className='typeInputs'>
                             <select id='0' name="Tipos" className='Options' onChange={(e => handleOnChange(e))}>
@@ -94,12 +128,13 @@ export default function Detail() {
                                     })
                                 }
                             </select>
+
                         </div>
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Imagen ? null : <div className='ErrorCreate'>{errors.Imagen}</div>}
                         <label>Image:</label>
                         <input type="url" name="Imagen" onChange={(e => handleOnChange(e))} value={input.Imagen} />
-
                     </div>
                     <div className='InputsCreate'>
                         <label>HP:</label>
@@ -126,7 +161,7 @@ export default function Detail() {
                         <input type="number" name="Altura" onChange={(e => handleOnChange(e))} value={input.Altura} />
                     </div>
                     <div >
-                        <button type="submit" onClick={(e => handlePost(e))}>Create</button>
+                        <button disabled={errors.Nombre || errors.Imagen || errors.Tipos} type="submit" onClick={(e => handlePost(e))}>Create</button>
                     </div>
                 </form>
             </div>

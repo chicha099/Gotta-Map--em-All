@@ -65,9 +65,10 @@ router.get("/", (req, res) => {
                             for (let i = 0; i < allPokesData.length; i++) {
                                 let name = allPokesData[i].name;
                                 let force = allPokesData[i].stats[1].base_stat;
+                                let id = allPokesData[i].id;
                                 let types = allPokesData[i].types.map(t => t.type.name);
                                 let img = allPokesData[i].sprites.other['official-artwork'].front_default;
-                                allPokemonsFinal.push({ name, types, img, force })
+                                allPokemonsFinal.push({ name, types, img, force, id })
                                 //Declaro variables para el nombre, tipos y foto de cada pokemon y las pusheo a un array vacio
                                 Pokemon.findAll({
                                     include: {

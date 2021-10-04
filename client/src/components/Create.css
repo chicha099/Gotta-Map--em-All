@@ -38,3 +38,8 @@
 .Options {
     width: 100%;
 }
+
+.ErrorCreate {
+    color: red;
+    display: flex;
+}

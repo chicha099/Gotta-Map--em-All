@@ -11,7 +11,6 @@ export default function Card({ name, types, img }) {
         type2 = type2[0].toUpperCase() + type2.slice(1);
     }
     return (
-
         <div className='cardDiv'>
             <div className='Card'>
                 <img src={img} alt="img not found" className='Img'/>
