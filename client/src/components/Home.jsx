@@ -7,11 +7,13 @@ import Card from './Card';
 import Nav from './Nav';
 import Sidebar from './Sidebar';
 import Pagination from './Pages';
+import Details from './Details';
 import './Home.css';
 
 export default function Home() {
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
+    const popupState = useSelector((state) => state.popup);
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsPerPage, setPokemonsPerPage] = useState(9);
     const lastPokemonIndex = currentPage * pokemonsPerPage;
@@ -41,10 +43,13 @@ export default function Home() {
 
     return (
         <div>
+
             <Nav />
             <div id='main' className='MainDiv'>
+
                 <Sidebar />
                 <div>
+                    {/* <button onClick={() => setPopup(true)}>pop up</button> */}
                     <select onChange={e => handleOrderByName(e)} className='Font'>
                         <option value="alpha-Asc">A-Z</option>
                         <option value="alpha-Desc">Z-A</option>
@@ -62,7 +67,7 @@ export default function Home() {
                                 if (p.types) {
                                     return (
                                         <div>
-                                            <Card name={p.name} types={p.types} img={p.img} />
+                                            <Card name={p.name} types={p.types} img={p.img} id={p.id} />
                                         </div>
                                     )
                                 }
@@ -86,6 +91,9 @@ export default function Home() {
                 </div>
             </div>
             <div>
+                {popupState ? (
+                        <Details />
+                ) : (<h1>FALSEEEEE</h1>)}
                 <Pagination
                     pokemonsPerPage={pokemonsPerPage}
                     allPokemons={allPokemons.length}

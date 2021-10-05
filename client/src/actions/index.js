@@ -64,16 +64,16 @@ export function searchName(name) {
     }
 }
 
-export function postPokemon(payload){
-    return function(dispatch){
+export function postPokemon(payload) {
+    return function (dispatch) {
         axios.post('http://localhost:3001/pokemons', payload)
-        .then(resp => {
-            return resp;
-        })
+            .then(resp => {
+                return resp;
+            })
     }
 }
 
-export function GetPokemonById(id){
+export function GetPokemonById(id) {
     return function (dispatch) {
         axios.get(`http://localhost:3001/pokemons/${id}`)
             .then(resp => {
@@ -82,5 +82,12 @@ export function GetPokemonById(id){
                     payload: resp.data
                 })
             })
+    }
+}
+
+export function changePopup(payload) {
+    return {
+        type: 'CHANGE_POPUP',
+        payload
     }
 }

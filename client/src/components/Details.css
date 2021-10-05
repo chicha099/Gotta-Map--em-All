@@ -1,0 +1,46 @@
+.mainDetail {
+    /* padding-top: 10%; */
+    display: flex;
+    justify-content: center;
+    height: 60%;
+}
+.bigCard {
+    background-color: thistle;
+    width: 375px;
+    height: 525px;
+}
+
+.imgDetail{
+    width: 50%;
+    display: flex;
+    align-self: center;
+}
+
+.specImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgDetailDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.detailedInfo {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    margin-top: 20%;
+}
+
+.allDet {
+    width: 375px;
+    position: fixed;
+    left: 40%;
+    top: 20%;
+}

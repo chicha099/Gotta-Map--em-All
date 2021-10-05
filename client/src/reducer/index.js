@@ -2,7 +2,10 @@
 const initialState = {
     pokemons: [],
     allPokemons: [],
-    types: []
+    types: [],
+    detail: [],
+    popup: false,
+    id: null
 }
 
 function rootReducer(state = initialState, action) {
@@ -123,8 +126,19 @@ function rootReducer(state = initialState, action) {
         case 'SEARCH_ID':
             return {
                 ...state,
-                pokemons: action.payload
+                detail: action.payload
             };
+        case 'CHANGE_POPUP':
+            return {
+                ...state,
+                popup: action.payload[0],
+                id: action.payload[1]
+            };
+            case 'SET_ID_DETAIL':
+                return {
+                    ...state,
+                    id: action.payload
+                }
         default:
             return state;
     }
