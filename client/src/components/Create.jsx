@@ -75,6 +75,24 @@ export default function Detail() {
             case 'Tipos':
                 input.Tipos.length !== 2 ? setErrors({ ...errors, [name]: 'Both types are required!' }) : setErrors({ ...errors, [name]: '' });
                 break;
+            case 'Vida':
+                value < 1 ? setErrors({ ...errors, [name]: 'HP must be higher than 0!' }) : setErrors({ ...errors, [name]: '' });
+                break;
+            case 'Fuerza':
+                value < 1 ? setErrors({ ...errors, [name]: 'Force must be higher than 0!' }) : setErrors({ ...errors, [name]: '' });
+                break;
+            case 'Defensa':
+                value < 1 ? setErrors({ ...errors, [name]: 'Defense must be higher than 0!' }) : setErrors({ ...errors, [name]: '' });
+                break;
+            case 'Velocidad':
+                value < 1 ? setErrors({ ...errors, [name]: 'Speed must be higher than 0!' }) : setErrors({ ...errors, [name]: '' });
+                break;
+            case 'Altura':
+                value < 1 ? setErrors({ ...errors, [name]: 'Height must be higher than 0!' }) : setErrors({ ...errors, [name]: '' });
+                break;
+            case 'Peso':
+                value < 1 ? setErrors({ ...errors, [name]: 'Weight must be higher than 0!' }) : setErrors({ ...errors, [name]: '' });
+                break;
             default:
                 break;
         }
@@ -136,31 +154,37 @@ export default function Detail() {
                         <input type="url" name="Imagen" onChange={(e => handleOnChange(e))} value={input.Imagen} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Vida ? null : <div className='ErrorCreate'>{errors.Vida}</div>}
                         <label>HP:</label>
                         <input type="number" name="Vida" onChange={(e => handleOnChange(e))} value={input.Vida} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Fuerza ? null : <div className='ErrorCreate'>{errors.Fuerza}</div>}
                         <label>Force:</label>
                         <input type="number" name="Fuerza" onChange={(e => handleOnChange(e))} value={input.Fuerza} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Defensa ? null : <div className='ErrorCreate'>{errors.Defensa}</div>}
                         <label>Defense:</label>
                         <input type="number" name="Defensa" onChange={(e => handleOnChange(e))} value={input.Defensa} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Velocidad ? null : <div className='ErrorCreate'>{errors.Velocidad}</div>}
                         <label>Speed:</label>
                         <input type="number" name="Velocidad" onChange={(e => handleOnChange(e))} value={input.Velocidad} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Peso ? null : <div className='ErrorCreate'>{errors.Peso}</div>}
                         <label>Weight:</label>
                         <input type="number" name="Peso" onChange={(e => handleOnChange(e))} value={input.Peso} />
                     </div>
                     <div className='InputsCreate'>
+                        {!errors.Altura ? null : <div className='ErrorCreate'>{errors.Altura}</div>}
                         <label>Height:</label>
                         <input type="number" name="Altura" onChange={(e => handleOnChange(e))} value={input.Altura} />
                     </div>
                     <div >
-                        <button disabled={errors.Nombre || errors.Imagen || errors.Tipos} type="submit" onClick={(e => handlePost(e))}>Create</button>
+                        <button disabled={errors.Nombre || errors.Imagen || errors.Tipos || errors.Vida || errors.Fuerza || errors.Defensa || errors.Velocidad || errors.Altura || errors.Peso} type="submit" onClick={(e => handlePost(e))}>Create</button>
                     </div>
                 </form>
             </div>

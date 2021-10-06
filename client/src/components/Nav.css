@@ -43,7 +43,8 @@
     color: whitesmoke;
     justify-self: center;
     align-self: center;
-    margin-right: 50%;
+    margin-right: 45%;
     flex-direction: row;
     column-gap: 5%;
+    font-family: gba;
 }

@@ -1,6 +1,6 @@
 import react from 'react';
 import { Link } from 'react-router-dom';
-import { changePopup, idForDetail } from '../actions';
+import { changePopup, GetPokemonById } from '../actions';
 import { useDispatch } from 'react-redux';
 import './Card.css';
 
@@ -16,10 +16,8 @@ export default function Card({ name, types, img, id }) {
     }
 
     function handlePopup(bool, id) {
-        // dispatch(idForDetail(id));
         dispatch(changePopup(bool, id))
     }
-
     return (
         <span onClick={() => handlePopup([true, id])}>
             <div className='cardDiv'>

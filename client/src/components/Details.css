@@ -3,23 +3,31 @@
     display: flex;
     justify-content: center;
     height: 60%;
+    font-family: gba;
 }
 .bigCard {
-    background-color: thistle;
+    background-color: whitesmoke;
     width: 375px;
     height: 525px;
+    border-radius: 1%;
+    border: 1px solid black;
+    box-shadow: 10px 10px 23px -7px rgba(0,0,0,0.51);
 }
 
 .imgDetail{
-    width: 50%;
+    width: 70%;
     display: flex;
     align-self: center;
+    box-shadow: black;
+    
 }
 
 .specImg {
-    width: 100%;
     display: flex;
     justify-content: center;
+    background-color: blanchedalmond;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .imgDetailDiv {
@@ -28,14 +36,14 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    
+    margin-top: 1%;
 }
 
 .detailedInfo {
     display: flex;
     flex-direction: column;
     align-content: flex-end;
-    margin-top: 20%;
+    margin-top: 3%;
 }
 
 .allDet {
@@ -43,4 +51,20 @@
     position: fixed;
     left: 40%;
     top: 20%;
+    z-index: 999;
+}
+
+.darken {
+    position: fixed;
+    background-color: black;
+    opacity: 50%;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -5000;
+}
+
+.stats {
+    margin-bottom: 4%;
 }

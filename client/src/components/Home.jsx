@@ -41,15 +41,13 @@ export default function Home() {
         dispatch(orderPokemonsByForce(e.target.value));
     }
 
+    console.log(currentPokemons)
     return (
         <div>
-
             <Nav />
             <div id='main' className='MainDiv'>
-
                 <Sidebar />
                 <div>
-                    {/* <button onClick={() => setPopup(true)}>pop up</button> */}
                     <select onChange={e => handleOrderByName(e)} className='Font'>
                         <option value="alpha-Asc">A-Z</option>
                         <option value="alpha-Desc">Z-A</option>
@@ -71,19 +69,23 @@ export default function Home() {
                                         </div>
                                     )
                                 }
-                                else {
+                                else if(p.tipos){
                                     let nameDb = p.Nombre;
                                     let typesDb = [];
                                     let imgDb = p.Imagen;
+                                    let idDb = p.ID;
                                     p.tipos.forEach(t => {
 
                                         typesDb.push(t.name)
                                     });
                                     return (
                                         <div>
-                                            <Card name={nameDb} types={typesDb} img={imgDb} />
+                                            <Card name={nameDb} types={typesDb} img={imgDb} id={idDb} />
                                         </div>
                                     )
+                                }
+                                else{
+                                    return (<h1 className='notFound'>Searched Pokemon does not exist!</h1>)
                                 }
                             })
                         }
@@ -92,8 +94,8 @@ export default function Home() {
             </div>
             <div>
                 {popupState ? (
-                        <Details />
-                ) : (<h1>FALSEEEEE</h1>)}
+                    <Details />
+                ) : ("")}
                 <Pagination
                     pokemonsPerPage={pokemonsPerPage}
                     allPokemons={allPokemons.length}

@@ -24,3 +24,9 @@
     font-size: small;
     height: 3%;
 }
+
+.notFound {
+    display: flex;
+    margin-top: 100%;
+    margin-left: 200%;
+}
