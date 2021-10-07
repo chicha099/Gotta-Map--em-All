@@ -184,7 +184,7 @@ export default function Detail() {
                         <input type="number" name="Altura" onChange={(e => handleOnChange(e))} value={input.Altura} />
                     </div>
                     <div >
-                        <button disabled={errors.Nombre || errors.Imagen || errors.Tipos || errors.Vida || errors.Fuerza || errors.Defensa || errors.Velocidad || errors.Altura || errors.Peso} type="submit" onClick={(e => handlePost(e))}>Create</button>
+                        <button className='buttonCreate' disabled={errors.Nombre || errors.Imagen || errors.Tipos || errors.Vida || errors.Fuerza || errors.Defensa || errors.Velocidad || errors.Altura || errors.Peso} type="submit" onClick={(e => handlePost(e))}>Create</button>
                     </div>
                 </form>
             </div>

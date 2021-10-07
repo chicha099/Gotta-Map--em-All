@@ -7,7 +7,7 @@
 
 .Page {
     /* border: 1px solid brown; */
-    /* border-radius: 30%; */
+    border-radius: 10%;
     width: 30px;
     height: 30px;
     border: 0.5px solid black;
@@ -18,7 +18,16 @@
 
 .Page:hover {
     transition-duration: 0.3s;
-    background-color: lightseagreen;
+    background-color: #4B6587;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
     width: 40px;
     height: 40px;
+}
+
+.footer {
+    height: auto;
+    position: fixed;
+    bottom: 37px;
+    left: 960px
 }

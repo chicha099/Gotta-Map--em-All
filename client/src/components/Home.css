@@ -30,3 +30,26 @@
     margin-top: 100%;
     margin-left: 200%;
 }
+
+.loadingHome {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    flex-direction: column;
+    align-content: center;
+    font-family: gba;
+}
+
+.loadingMew {
+    height: 200px;
+    width: 200px;
+    margin-left: 45%;
+}
+
+select {
+    cursor: pointer;
+}
+
+option {
+    cursor: pointer;
+}

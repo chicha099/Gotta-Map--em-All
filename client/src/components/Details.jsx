@@ -25,7 +25,7 @@ export default function Details() {
                 <div>
                     <div id='mainDetail' className='mainDetail'>
                         <div id='bigCard' className='bigCard'>
-                            <button onClick={() => handleClickPopup(false)}>X</button>
+                            <button onClick={() => handleClickPopup(false)} className='closeBut'>X</button>
                             {
                                 pokeDetails.Nombre ?
                                     <h1>{pokeDetails.Nombre[0].toUpperCase() + pokeDetails.Nombre.slice(1)}</h1> :

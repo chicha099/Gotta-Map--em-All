@@ -1,7 +1,7 @@
 .Card {
     /* border: 1px solid black; */
     width: 100%;
-    background-color: rgb(231, 231, 231);
+    background-color: #F0E5CF;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -11,6 +11,7 @@
     align-content: center;
     padding-top: 0.8%;
     font-family: gba;
+    font-size: x-large;
 }
 
 .Img {
@@ -23,13 +24,13 @@
     width: 210px;
     height: 210px;
     background-color: white;
-    /* border-radius: 10%; */
 }
 
 .Card:hover {
-    background-color: lightblue;
+    background-color: #F0E5CF;
     border-radius: 10%;
-    border: 2px solid lightblue;
+    border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .cardDiv {

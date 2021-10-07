@@ -68,3 +68,14 @@
 .stats {
     margin-bottom: 4%;
 }
+
+.closeBut {
+    display: flex;
+    left: 0;
+    width: 5%;
+    align-content: center;
+    justify-content: center;
+    margin-left: 1%;
+    margin-top: 1%;
+    cursor: pointer;
+}

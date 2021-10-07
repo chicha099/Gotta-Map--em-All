@@ -14,6 +14,7 @@ export default function Home() {
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
     const popupState = useSelector((state) => state.popup);
+    const allTypes = useSelector((state) => state.types);
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsPerPage, setPokemonsPerPage] = useState(9);
     const lastPokemonIndex = currentPage * pokemonsPerPage;
@@ -28,11 +29,6 @@ export default function Home() {
         dispatch(getPokemons());
     }, [dispatch]);
 
-    function handleClick(e) {
-        e.preventDefault();
-        dispatch(getPokemons());
-    }
-
     function handleOrderByName(e) {
         dispatch(orderPokemonsByName(e.target.value));
     }
@@ -44,64 +40,72 @@ export default function Home() {
     console.log(currentPokemons)
     return (
         <div>
-            <Nav />
-            <div id='main' className='MainDiv'>
-                <Sidebar />
+            {currentPokemons.length > 0 || allTypes.length > 0 ? (
                 <div>
-                    <select onChange={e => handleOrderByName(e)} className='Font'>
-                        <option value="alpha-Asc">A-Z</option>
-                        <option value="alpha-Desc">Z-A</option>
-                    </select>
-                    <select onChange={e => handleOrderByForce(e)} className='Font'>
-                        <option value="force-Asc">FORCE ASC</option>
-                        <option value="force-Desc">FORCE DESC</option>
-                    </select>
-                    <button onClick={e => { handleClick(e) }}>
-                        Load Pokemons Again
-                    </button>
-                    <div id="pokemons" className='Pokemons'>
-                        {
-                            currentPokemons && currentPokemons.map(p => {
-                                if (p.types) {
-                                    return (
-                                        <div>
-                                            <Card name={p.name} types={p.types} img={p.img} id={p.id} />
-                                        </div>
-                                    )
-                                }
-                                else if(p.tipos){
-                                    let nameDb = p.Nombre;
-                                    let typesDb = [];
-                                    let imgDb = p.Imagen;
-                                    let idDb = p.ID;
-                                    p.tipos.forEach(t => {
+                    <Nav />
+                    <div id='main' className='MainDiv'>
+                        <Sidebar />
+                        <div className='fixPages'>
+                            <select onChange={e => handleOrderByName(e)} className='Font'>
+                                <option value="alpha-Asc">A-Z</option>
+                                <option value="alpha-Desc">Z-A</option>
+                            </select>
+                            <select onChange={e => handleOrderByForce(e)} className='Font'>
+                                <option value="force-Asc">FORCE ASC</option>
+                                <option value="force-Desc">FORCE DESC</option>
+                            </select>
+                            <div id="pokemons" className='Pokemons'>
+                                {
+                                    currentPokemons && currentPokemons.map(p => {
+                                        if (p.types) {
+                                            return (
+                                                <div>
+                                                    <Card name={p.name} types={p.types} img={p.img} id={p.id} />
+                                                </div>
+                                            )
+                                        }
+                                        else if (p.tipos) {
+                                            let nameDb = p.Nombre;
+                                            let typesDb = [];
+                                            let imgDb = p.Imagen;
+                                            let idDb = p.ID;
+                                            p.tipos.forEach(t => {
 
-                                        typesDb.push(t.name)
-                                    });
-                                    return (
-                                        <div>
-                                            <Card name={nameDb} types={typesDb} img={imgDb} id={idDb} />
-                                        </div>
-                                    )
+                                                typesDb.push(t.name)
+                                            });
+                                            return (
+                                                <div>
+                                                    <Card name={nameDb} types={typesDb} img={imgDb} id={idDb} />
+                                                </div>
+                                            )
+                                        }
+                                        else {
+                                            return (<h1 className='notFound'>The searched pokemon does not exist!</h1>)
+                                        }
+                                    })
                                 }
-                                else{
-                                    return (<h1 className='notFound'>Searched Pokemon does not exist!</h1>)
-                                }
-                            })
-                        }
+                            </div>
+                        </div>
+                        <Pagination
+                            pokemonsPerPage={pokemonsPerPage}
+                            allPokemons={allPokemons.length}
+                            pages={pages}
+                        />
                     </div>
+                    <div>
+                        {popupState ? (
+                            <Details />
+                        ) : ("")}
+
+                    </div>
+
                 </div>
-            </div>
-            <div>
-                {popupState ? (
-                    <Details />
-                ) : ("")}
-                <Pagination
-                    pokemonsPerPage={pokemonsPerPage}
-                    allPokemons={allPokemons.length}
-                    pages={pages}
-                />
-            </div>
+            ) :
+                <div className='loadingHome'>
+                    <img className='loadingMew' src="https://media3.giphy.com/media/IQebREsGFRXmo/200.gif" alt="" />
+                    <h2>Completing Pokedex...</h2>
+                </div>
+            }
         </div>
     )
 }

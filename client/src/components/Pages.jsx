@@ -9,7 +9,7 @@ export default function Pagination({ pokemonsPerPage, allPokemons, pages }) {
     }
 
     return (
-        <footer>
+        <footer className='footer'>
             <div className='Pages'>
                 {
                     pageNumbers && pageNumbers.map(p => {

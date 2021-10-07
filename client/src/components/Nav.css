@@ -1,5 +1,5 @@
 .NavDiv {
-    background-color: brown;
+    background-color: #4B6587;
     height: 5vh;
     display: flex;
     justify-content: flex-end;
@@ -20,6 +20,7 @@
     align-self: center;
     margin-right: 3%;
     font-family: gba;
+    cursor: pointer;
 }
 
 .Logo {

@@ -2,6 +2,7 @@
     display: flex;
     height: 100vh;
     flex-direction: column;
+    font-family: 'gba';
 }
 
 .Form {
@@ -23,6 +24,7 @@
     margin-top: 2%;
     margin-left: 40%;
     justify-content: flex-end;
+    height: 30px;
 }
 
 .typeInputs {
@@ -42,4 +44,12 @@
 .ErrorCreate {
     color: red;
     display: flex;
+}
+
+.buttonCreate {
+    margin-left: 60%;
+    width: 10%;
+    height: 40px;
+    font-family: gba;
+    font-size: large;
 }
