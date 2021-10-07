@@ -37,7 +37,6 @@ export default function Home() {
         dispatch(orderPokemonsByForce(e.target.value));
     }
 
-    console.log(currentPokemons)
     return (
         <div>
             {currentPokemons.length > 0 || allTypes.length > 0 ? (

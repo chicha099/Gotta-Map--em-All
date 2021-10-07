@@ -35,7 +35,7 @@ export default function Details() {
                                 <div className='specImg'>
                                     {
                                         pokeDetails.Imagen ?
-                                            <img className='imgDetail' src={pokeDetails.Imagen} alt="" height='263px'/> :
+                                            <img className='imgDetail' src={pokeDetails.Imagen} alt="" height='263px' /> :
                                             <img className='imgDetail' src={pokeDetails[0].img} alt="" />
                                     }
 
@@ -84,7 +84,6 @@ export default function Details() {
                     <img src="https://media3.giphy.com/media/IQebREsGFRXmo/200.gif" alt="" />
                 </div>
             )}
-
         </div>
     )
 };

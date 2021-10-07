@@ -53,3 +53,27 @@
     font-family: gba;
     font-size: large;
 }
+
+.formPrincipal {
+    display: flex;
+    flex-direction: row;
+}
+
+.statsForm {
+    background-color: whitesmoke;
+    width: 20%;
+    padding-bottom: 0.5%;
+    margin-left: 2%;
+    margin-top: 1%;
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.noName{
+    color: whitesmoke;
+}
+.formStatsImg {
+    background-color: blanchedalmond;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
