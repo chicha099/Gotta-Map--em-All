@@ -25,19 +25,50 @@
 }
 
 .ButtonFilterTypes {
-    height: 100%;
+    height: 90%;
     width: 20px;
     border-radius: 50%;
     cursor: pointer;
+    background-color: #e0dfdc;
+    border: 0.5px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.ButtonFilterTypes:hover {
+    transition-duration: 300ms;
+    width: 25px;
+    height: 25px;
+}
+
+.ButtonFilterTypes:active {
+    transition-duration: 100ms;
+    width: 20px;
+    height: 20px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .ButtonFilterOther {
     width: 20px;
     border-radius: 50%;
-    height: 100%;
+    height: 90%;
     cursor: pointer;
+    background-color: #e0dfdc;
+    border: 0.5px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
+.ButtonFilterOther:hover {
+    transition-duration: 300ms;
+    width: 25px;
+    height: 25px;
+}
+
+.ButtonFilterOther:active {
+    transition-duration: 100ms;
+    width: 20px;
+    height: 20px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
 .Filter2 {
     margin-left: 4%;
     display: flex;
@@ -58,6 +89,20 @@
 
 .Label {
     margin-left: 3%;
-    color: whitesmoke;
     cursor: pointer;
+    /* text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 3px rgba(0,0,0,.5); */
+    text-shadow: 0 -1px 0 #fff, 0 2px 2px #2e2e2e;
+    color: #e0dfdc;
+    font-size: 19.2px;
+}
+
+.Label:hover {
+    transition-duration: 300ms;
+    margin-left: 3%;
+    color: #EB5E0B;
+    cursor: pointer;
+    /* font-size: 20px; */
+    text-shadow: 0 -1px 0 #fff, 0 2px 2px #2e2e2e;
+    color: #e0dfdc;
+    letter-spacing: 5px;
 }

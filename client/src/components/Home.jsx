@@ -44,12 +44,12 @@ export default function Home() {
                         <Sidebar />
                         <div className='fixPages'>
                             <select onChange={e => handleOrderByName(e)} className='Font'>
-                                <option value="alpha-Asc">A-Z</option>
-                                <option value="alpha-Desc">Z-A</option>
+                                <option className='optionsHome' value="alpha-Asc">A-Z</option>
+                                <option className='optionsHome' value="alpha-Desc">Z-A</option>
                             </select>
                             <select onChange={e => handleOrderByForce(e)} className='Font'>
-                                <option value="force-Asc">FORCE ASC</option>
-                                <option value="force-Desc">FORCE DESC</option>
+                                <option className='optionsHome' value="force-Asc">FORCE ASC</option>
+                                <option className='optionsHome' value="force-Desc">FORCE DESC</option>
                             </select>
                             <div id="pokemons" className='Pokemons'>
                                 {

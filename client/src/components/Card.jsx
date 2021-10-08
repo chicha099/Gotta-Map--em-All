@@ -18,14 +18,14 @@ export default function Card({ name, types, img, id }) {
     function handlePopup(bool, id) {
         dispatch(changePopup(bool, id))
     }
-    
+
     return (
         <span onClick={() => handlePopup([true, id])}>
             <div className='cardDiv'>
                 <div className='Card'>
                     <img src={img} alt="img not found" className='Img' />
-                    <h5>{nameF}</h5>
-                    <h6>{type1F} {type2}</h6>
+                    <h5 className='demotext'>{nameF}</h5>
+                    <h6 className='demotext'>{type1F} {type2}</h6>
                 </div>
             </div>
         </span>

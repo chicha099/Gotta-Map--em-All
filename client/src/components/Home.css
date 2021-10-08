@@ -23,6 +23,20 @@
     font-family: gba;
     font-size: small;
     height: 3%;
+    border: 1px solid transparent;
+    background-color: #EB5E0B;
+    color: whitesmoke;
+    border-radius: 7%;
+    margin-left: 0.1%;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 0.5px 0.5px 2px rgba(0,0,0,.5);
+}
+
+.optionsHome {
+    background-color: whitesmoke;
+    color: #EB5E0B;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .notFound {
