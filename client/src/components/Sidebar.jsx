@@ -1,7 +1,7 @@
 import react from 'react';
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { filterPokemonsByOrigin, getTypes } from '../actions';
+import { filterPokemonsByOrigin, getTypes, setPage } from '../actions';
 import { filterPokemonsByType } from '../actions';
 import './Sidebar.css';
 
@@ -15,10 +15,12 @@ export default function Sidebar() {
 
     function handleFilterTypes(e) {
         //reset pages!!!!
+        dispatch(setPage(1));
         dispatch(filterPokemonsByType(e.target.value));
     }
 
     function handleFilterOrigin(e) {
+        dispatch(setPage(1));
         dispatch(filterPokemonsByOrigin(e.target.value));
     }
 

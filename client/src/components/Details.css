@@ -7,10 +7,10 @@
 }
 
 .bigCard {
-    background-color: whitesmoke;
+    background-color: #F8F1F1;
     width: 375px;
-    height: 525px;
-    border-radius: 1%;
+    height: 600px;
+    border-radius: 4%;
     border: 1px solid black;
     box-shadow: 10px 10px 23px -7px rgba(0,0,0,0.51);
 }
@@ -68,15 +68,138 @@
 
 .stats {
     margin-bottom: 4%;
+    max-width: 255px;
+    display: flex;
+    flex-direction: row;
 }
 
 .closeBut {
     display: flex;
+    position:absolute;
     left: 0;
     width: 5%;
     align-content: center;
     justify-content: center;
-    margin-left: 1%;
-    margin-top: 1%;
+    margin-left: 2%;
+    margin-top: 2%;
     cursor: pointer;
+    border-radius: 30%;
+    border: 1px solid black;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+.closeBut:hover {
+    color: #F8F1F1;
+    transition-duration: 300ms;
+   background-color: rgb(187, 0, 0);
+}
+
+.closeBut:active {
+    background-color:rgb(151, 0, 0) ;
+}
+
+.pokeNameDet {
+    margin-top: 5%;
+}
+
+#pokeTypeDet {
+    font-size: 25px;
+    margin-left: 30%;
+}
+
+#normal {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #dbedeb 0, #d2dbda 25%, #c6c6c6 50%, #bab1b4 75%, #afa1a6 100%);
+}
+
+#fighting {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #974916 0, #8e360c 25%, #811c00 50%, #740000 75%, #6a0000 100%);
+}
+
+#flying {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #80fcff 0, #5cebff 25%, #15d8f4 50%, #00c5e8 75%, #00b4dd 100%);
+}
+
+#poison {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #dc5bff 0, #c04cff 25%, #a13bf5 50%, #7e2beb 75%, #5720e3 100%);
+}
+
+#ground {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #b48a64 0, #ab7955 25%, #9f6543 50%, #925133 75%, #894028 100%);
+}
+
+#rock {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #974916 0, #8e360c 25%, #811c00 50%, #740000 75%, #6a0000 100%);
+}
+
+#bug {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #b9d437 0, #9ac827 25%, #74b90b 50%, #48a900 75%, #009d00 100%);
+}
+
+#ghost {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #9965a7 0, #86559c 25%, #704490 50%, #593484 75%, #43267b 100%);
+}
+
+#steel {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #f5ffff 0, #ebf5f3 25%, #dfdfdf 50%, #d2cacc 75%, #c7b9bf 100%);
+}
+
+#fire {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #ffb42e 0, #ff9f1d 25%, #ff8500 50%, #f46a00 75%, #ed5100 100%);
+}
+
+#water {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #8cd7ff 0, #48b1e5 50%, #008cca 100%);
+}
+
+#grass {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #76b843 0, #5fb240 16.67%, #41aa3c 33.33%, #009f37 50%, #009433 66.67%, #008b33 83.33%, #008436 100%);
+}
+
+#electric {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #fffd58 0, #ffe839 25%, #ffd200 50%, #efbc00 75%, #e0a800 100%);
+}
+
+#psychic {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #ff79c8 0, #ff68c5 25%, #f552bf 50%, #dc3dba 75%, #c62db8 100%);
+}
+
+#ice {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #daffff 0, #bfffff 25%, #a0f3ff 50%, #7fe0f1 75%, #60d0e6 100%);
+}
+
+#dragon {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #942ca6 0, #7e1a9e 25%, #630094 50%, #45008a 75%, #1f0083 100%);
+}
+
+#dark {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #51605f 0, #4a5150 25%, #404040 50%, #362f31 75%, #2d2227 100%);
+}
+
+#fairy {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #fff0ff 0, #ffdeff 25%, #f8cafa 50%, #e3b6ed 75%, #cfa6e4 100%);
+}
+
+#unknown {
+    background-image: url('https://besthqwallpapers.com/Uploads/29-12-2017/35497/thumb2-question-sign-art-creative-questions.jpg');
+}
+
+#shadow {
+    background-image: radial-gradient(circle at -16.45% 25.82%, #718180 0, #697270 25%, #5f5f5f 50%, #544d4f 75%, #4b3f44 100%);
+}
+
+.chart {
+    background-color: yellowgreen;
+    max-width: 255px;
+    /* width: 1px; */
+    display: flex;
+    /* justify-content: center; */
+    margin-left: 5%;
+    height: 5%;
+    border-radius: 5%;
+    padding-left: 10px;
+}
+
+.contChart {
+    display: flex;
+    margin-left: 5%;
 }

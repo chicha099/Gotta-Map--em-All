@@ -7,7 +7,7 @@
     justify-content: left;
     height: 90%;
     padding-bottom: 0.5%;
-    background-color: #5EAAA8;
+    background-color: #2e2e2e;
     max-width: 349px;
     border-radius: 1%;
     /* border: 10px ridge #EB5E0B; */
@@ -18,8 +18,6 @@
     margin-left: 4%;
     margin-top: 4.5%;
     display: flex;
-    /* justify-content: center;*/
-    /* align-content: center;  */
     font-family: gba;
     font-size: large;
 }
@@ -77,21 +75,17 @@
     font-family: gba;
     font-size: large;
     flex-direction: column;
-    /* margin-top: 3%; */
-    
 }
 
 .OriginalsNCreated {
     display: flex;
     margin-top: 5%;
-    /* height: 15px; */
 }
 
 .Label {
     margin-left: 3%;
     cursor: pointer;
-    /* text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 3px rgba(0,0,0,.5); */
-    text-shadow: 0 -1px 0 #fff, 0 2px 2px #2e2e2e;
+    /* text-shadow: 0 -1px 0 #fff, 0 2px 2px #2e2e2e; */
     color: #e0dfdc;
     font-size: 19.2px;
 }
@@ -101,8 +95,7 @@
     margin-left: 3%;
     color: #EB5E0B;
     cursor: pointer;
-    /* font-size: 20px; */
-    text-shadow: 0 -1px 0 #fff, 0 2px 2px #2e2e2e;
+    /* text-shadow: 0 -1px 0 #fff, 0 2px 2px #2e2e2e; */
     color: #e0dfdc;
     letter-spacing: 5px;
 }

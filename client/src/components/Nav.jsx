@@ -1,5 +1,5 @@
 import react from 'react';
-import { searchName } from '../actions';
+import { searchName, setPage } from '../actions';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -17,6 +17,7 @@ export default function Nav() {
 
     function handleSubmit(e) {
         e.preventDefault();
+        dispatch(setPage(1));
         dispatch(searchName(name))
     }
 

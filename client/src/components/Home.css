@@ -13,6 +13,7 @@
     flex-direction:row;
     column-gap: 1%;
     width: 53%;
+    margin-top: 1.7%;
 }
 
 .pageMarkers {
@@ -20,6 +21,7 @@
 }
 
 .Font {
+    /* position: fixed; */
     font-family: gba;
     font-size: small;
     height: 3%;
@@ -27,7 +29,8 @@
     background-color: #EB5E0B;
     color: whitesmoke;
     border-radius: 7%;
-    margin-left: 0.1%;
+    margin-left: 1%;
+    /* margin-top: 0.2%; */
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 0.5px 0.5px 2px rgba(0,0,0,.5);
 }
@@ -66,4 +69,10 @@ select {
 
 option {
     cursor: pointer;
+}
+
+.selectHome {
+position: fixed;
+left: 60%;
+display: flex;
 }
