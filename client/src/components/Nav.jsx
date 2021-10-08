@@ -33,7 +33,9 @@ export default function Nav() {
                 <h2> Create </h2>
                 <h2> Pokemon </h2>
             </Link>
-
+            <Link to='/about' className='CreateNav'>
+                <h2>About</h2>
+            </Link>
             <input
                 type='text'
                 className='Input'

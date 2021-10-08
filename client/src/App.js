@@ -4,6 +4,7 @@ import LandingPage from './components/Landing';
 import Home from './components/Home';
 import Create from './components/Create';
 import Details from './components/Details';
+import About from './components/About';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/home' component={Home} />
           <Route path='/create' component={Create} />
           <Route path='/pokemon/:id' component={Details} />
+          <Route path='/about' component={About}/>
         </Switch>
       </div>
     </BrowserRouter>

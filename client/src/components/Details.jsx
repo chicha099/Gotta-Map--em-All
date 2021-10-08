@@ -63,6 +63,11 @@ export default function Details() {
                                             <h3 className='stats'> Defense: {pokeDetails[0].defense}</h3>
                                     }
                                     {
+                                        pokeDetails.Velocidad ?
+                                            <h3 className='stats'> Speed: {pokeDetails.Velocidad}</h3> :
+                                            <h3 className='stats'> Speed: {pokeDetails[0].speed}</h3>
+                                    }
+                                    {
                                         pokeDetails.Altura ?
                                             <h3 className='stats'> Height: {pokeDetails.Altura}</h3> :
                                             <h3 className='stats'> Height: {pokeDetails[0].height}</h3>
