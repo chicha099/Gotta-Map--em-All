@@ -1,11 +1,17 @@
 import React from 'react';
+import { setPage } from '../actions';
+import { useDispatch } from 'react-redux';
 import './Pages.css';
 
-export default function Pagination({ pokemonsPerPage, allPokemons, pages }) {
+export default function Pagination({ pokemonsPerPage, allPokemons}) {
     const pageNumbers = [];
-
+    const dispatch = useDispatch();
     for (let i = 1; i <= Math.ceil(allPokemons / pokemonsPerPage); i++) {
         pageNumbers.push(i)
+    }
+
+    function handleOnPage(p) {
+        dispatch(setPage(p))
     }
 
     return (
@@ -15,7 +21,7 @@ export default function Pagination({ pokemonsPerPage, allPokemons, pages }) {
                     pageNumbers && pageNumbers.map(p => {
                         return (
                             <div>
-                                <button className='Page' onClick={() => pages(p)} >{p}</button>
+                                <button className='Page' onClick={() => handleOnPage(p)} >{p}</button>
                             </div>
                         )
                     })

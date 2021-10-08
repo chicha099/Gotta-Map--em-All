@@ -15,15 +15,13 @@ export default function Home() {
     const allPokemons = useSelector((state) => state.pokemons);
     const popupState = useSelector((state) => state.popup);
     const allTypes = useSelector((state) => state.types);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(9);
+    const currentPage = useSelector((state) => state.page);
+    const pokemonsPerPage = 9;
     const lastPokemonIndex = currentPage * pokemonsPerPage;
     const firstPokemonIndex = lastPokemonIndex - pokemonsPerPage;
     const currentPokemons = Array.isArray(allPokemons) ? allPokemons.slice(firstPokemonIndex, lastPokemonIndex) : [allPokemons];
 
-    const pages = (pageNumber) => {
-        setCurrentPage(pageNumber)
-    }
+
 
     useEffect(() => {
         dispatch(getPokemons());
@@ -88,7 +86,6 @@ export default function Home() {
                         <Pagination
                             pokemonsPerPage={pokemonsPerPage}
                             allPokemons={allPokemons.length}
-                            pages={pages}
                         />
                     </div>
                     <div>

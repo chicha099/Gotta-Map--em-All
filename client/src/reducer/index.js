@@ -5,7 +5,8 @@ const initialState = {
     types: [],
     detail: [],
     popup: false,
-    id: null
+    id: null,
+    page: 1
 }
 
 function rootReducer(state = initialState, action) {
@@ -138,6 +139,11 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 detail: []
+            }
+        case 'SET_PAGE':
+            return {
+                ...state,
+                page: action.payload
             }
         default:
             return state;

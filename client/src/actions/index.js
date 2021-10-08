@@ -97,3 +97,10 @@ export function resetDetail(){
         type: 'RESET_DETAIL'
     }
 }
+
+export function setPage(payload){
+    return {
+        type: 'SET_PAGE',
+        payload
+    }
+}
