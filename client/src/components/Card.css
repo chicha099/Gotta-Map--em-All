@@ -1,7 +1,7 @@
 .Card {
     /* border: 1px solid black; */
     width: 100%;
-    background-color: #F0E5CF;
+    background-color: #EB5E0B;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -12,12 +12,16 @@
     padding-top: 0.8%;
     font-family: gba;
     font-size: x-large;
+    color: whitesmoke;
+    border: 2px solid transparent;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .Img {
     width: 200px;
     height: 200px;
     border-radius: 10%;
+    background-color: white;
 }
 
 .Img:hover {
@@ -27,7 +31,7 @@
 }
 
 .Card:hover {
-    background-color: #F0E5CF;
+    /* background-color: #F0E5CF; */
     border-radius: 10%;
     border: 2px solid transparent;
     cursor: pointer;

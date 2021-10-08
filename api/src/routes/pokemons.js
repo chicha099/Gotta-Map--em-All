@@ -98,6 +98,10 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
     const { id } = req.params;
 
+    if (id === '0') {
+        return res.json([])
+    }
+
     if (id.length < 10) {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then(resp => {

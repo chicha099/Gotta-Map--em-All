@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { GetPokemonById, changePopup } from "../actions";
+import { GetPokemonById, changePopup, resetDetail } from "../actions";
 import { useEffect } from "react";
 import './Details.css';
 
@@ -11,13 +11,19 @@ export default function Details() {
     const idDetail = useSelector((state) => state.id);
 
     useEffect(() => {
+        dispatch(resetDetail());
+    }, [])
+    
+    useEffect(() => {
         dispatch(GetPokemonById(idDetail));
     }, [dispatch]);
-
 
     function handleClickPopup(bool) {
         dispatch(changePopup(bool))
     }
+    
+
+    console.log(pokeDetails)
     return (
         <div className='allDet'>
             <div className='darken'></div>

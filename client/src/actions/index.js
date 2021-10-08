@@ -92,3 +92,8 @@ export function changePopup(payload) {
     }
 }
 
+export function resetDetail(){
+    return {
+        type: 'RESET_DETAIL'
+    }
+}

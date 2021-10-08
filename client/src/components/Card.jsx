@@ -18,6 +18,7 @@ export default function Card({ name, types, img, id }) {
     function handlePopup(bool, id) {
         dispatch(changePopup(bool, id))
     }
+    
     return (
         <span onClick={() => handlePopup([true, id])}>
             <div className='cardDiv'>

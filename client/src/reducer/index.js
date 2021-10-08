@@ -134,6 +134,11 @@ function rootReducer(state = initialState, action) {
                 popup: action.payload[0],
                 id: action.payload[1]
             };
+        case 'RESET_DETAIL':
+            return {
+                ...state,
+                detail: []
+            }
         default:
             return state;
     }
