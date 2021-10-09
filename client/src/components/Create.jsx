@@ -99,7 +99,7 @@ export default function Detail() {
         }
     };
 
-
+    console.log(input)
     function handlePost(e) {
         e.preventDefault();
         dispatch(postPokemon(input))
@@ -141,6 +141,7 @@ export default function Detail() {
                             <label>Types:</label>
                             <div className='typeInputs'>
                                 <select id='0' name="Tipos" className='Options' onChange={(e => handleOnChange(e))}>
+                                <option value="">Fst Type</option>
                                     {
                                         allTypes && allTypes.map(t => {
                                             let typeF = t.name[0].toUpperCase() + t.name.slice(1);
@@ -151,6 +152,7 @@ export default function Detail() {
                                     }
                                 </select>
                                 <select id='1' name="Tipos" className='Options' onChange={(e => handleOnChange(e))}>
+                                    <option value="">Sec Type</option>
                                     {
                                         allTypes && allTypes.map(t => {
                                             let typeF = t.name[0].toUpperCase() + t.name.slice(1);
@@ -166,7 +168,7 @@ export default function Detail() {
                         <div className='InputsCreate'>
                             {!errors.Imagen ? null : <div className='ErrorCreate'>{errors.Imagen}</div>}
                             <label>Image:</label>
-                            <input type="url" name="Imagen" onChange={(e => handleOnChange(e))} value={input.Imagen} />
+                            <input type="url" name="Imagen" onChange={(e => handleOnChange(e))} value={input.Imagen} placeholder='insert a valid url'/>
                         </div>
                         <div className='InputsCreate'>
                             {!errors.Vida ? null : <div className='ErrorCreate'>{errors.Vida}</div>}

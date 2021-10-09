@@ -45,10 +45,12 @@ export default function Home() {
                         <div className='fixPages'>
                             <div className='selectHome'>
                                 <select onChange={e => handleOrderByName(e)} className='Font'>
+                                    <option value="" selected disabled hidden>Sort</option>
                                     <option className='optionsHome' value="alpha-Asc">A-Z</option>
                                     <option className='optionsHome' value="alpha-Desc">Z-A</option>
                                 </select>
                                 <select onChange={e => handleOrderByForce(e)} className='Font'>
+                                    <option value="" selected disabled hidden>Sort Force</option>
                                     <option className='optionsHome' value="force-Asc">FORCE ASC</option>
                                     <option className='optionsHome' value="force-Desc">FORCE DESC</option>
                                 </select>

@@ -30,7 +30,26 @@
     color: white;
     font-size: xx-large;
     -webkit-text-stroke: 1px black;
+    display: flex;
+    justify-content: center;
 }
+
+.landingTitle {
+ position: relative;
+ top: 0;
+ transition: top 0.3s;
+}
+
+.landingTitle:hover {
+    top: -30px;
+    cursor: pointer;
+   }
+
+.hideTitle{
+    color: transparent;
+    -webkit-text-stroke: 1px transparent;
+    cursor: default;
+   }
 
 .ButtonDiv {
     display: inline-block;
@@ -39,7 +58,7 @@
     height: 10%;
     width: 20%;
     margin: 0 auto 0 auto;
-    border: 1px double black;
+    /* border: 1px double black; */
 }
 
 .Button {
@@ -49,5 +68,13 @@
     width: 100%;
 }
 
-
+.Button:hover {
+    border-radius: 50%;
+    width: 20%;
+    color: transparent;
+    transition-duration: 500ms;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png');
+    background-size: cover;
+    border: 0px solid transparent;
+}
   
