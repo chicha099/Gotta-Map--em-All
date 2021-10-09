@@ -102,7 +102,12 @@
     margin-top: 5%;
 }
 
-#pokeTypeDet {
+#pokeTypeDet1 {
+    font-size: 25px;
+    margin-left: 38%;
+}
+
+#pokeTypeDet2 {
     font-size: 25px;
     margin-left: 30%;
 }
@@ -120,7 +125,7 @@
 }
 
 #poison {
-    background-image: radial-gradient(circle at -16.45% 25.82%, #dc5bff 0, #c04cff 25%, #a13bf5 50%, #7e2beb 75%, #5720e3 100%);
+    background-image: radial-gradient(circle at -16.45% 25.82%, #7b2fa2 0, #631e98 25%, #480a8d 50%, #250082 75%, #000079 100%);
 }
 
 #ground {
@@ -190,16 +195,50 @@
 .chart {
     background-color: yellowgreen;
     max-width: 255px;
+    min-width: 1px;
     /* width: 1px; */
     display: flex;
     /* justify-content: center; */
     margin-left: 5%;
     height: 5%;
-    border-radius: 5%;
+    border-radius: 2%;
     padding-left: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
 .contChart {
     display: flex;
     margin-left: 5%;
+    margin-top: 1%;
+}
+
+.statHP {
+    position: fixed;
+    left: 44.5%;
+}
+
+.statForce {
+    position: fixed;
+    left: 46.2%
+}
+
+.statDefense {
+    position: fixed;
+    left: 47.4%
+}
+
+.statSpeed {
+    position: fixed;
+    left: 46.2%
+}
+
+.statWeight {
+    position: fixed;
+    left: 46.9%
+}
+
+.statHeight {
+    position: fixed;
+    left: 46.6%
 }

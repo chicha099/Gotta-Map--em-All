@@ -49,45 +49,45 @@ export default function Details() {
                                 <div className='detailedInfo'>
                                     {
                                         pokeDetails.tipos ?
-                                            <h3 className='stats' id='pokeTypeDet'>{pokeDetails.tipos[0].name[0].toUpperCase() + pokeDetails.tipos[0].name.slice(1) + " " + pokeDetails.tipos[1].name[0].toUpperCase() + pokeDetails.tipos[1].name.slice(1)}</h3> :
-                                            (pokeDetails[0].types.length === 2 ? <h3 className='stats' id='pokeTypeDet'>{pokeDetails[0].types[0][0].toUpperCase() + pokeDetails[0].types[0].slice(1) + " " + pokeDetails[0].types[1][0].toUpperCase() + pokeDetails[0].types[1].slice(1)}</h3> :
-                                                <h3 className='stats' id='pokeTypeDet'>{pokeDetails[0].types[0][0].toUpperCase() + pokeDetails[0].types[0].slice(1)}</h3>)
+                                            <h3 className='stats' id='pokeTypeDet2'>{pokeDetails.tipos[0].name[0].toUpperCase() + pokeDetails.tipos[0].name.slice(1) + " " + pokeDetails.tipos[1].name[0].toUpperCase() + pokeDetails.tipos[1].name.slice(1)}</h3> :
+                                            (pokeDetails[0].types.length === 2 ? <h3 className='stats' id='pokeTypeDet2'>{pokeDetails[0].types[0][0].toUpperCase() + pokeDetails[0].types[0].slice(1) + " " + pokeDetails[0].types[1][0].toUpperCase() + pokeDetails[0].types[1].slice(1)}</h3> :
+                                                <h3 className='stats' id='pokeTypeDet1'>{pokeDetails[0].types[0][0].toUpperCase() + pokeDetails[0].types[0].slice(1)}</h3>)
                                     }
                                     {
                                         pokeDetails.Vida ?
-                                            <div className='contChart'><h3 className='stats'> HP: {pokeDetails.Vida}</h3> <h3 className='chart' style={{ width: pokeDetails.Vida }}>{pokeDetails.Vida}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails.Vida }}>HP:</h3> <h3 className='statHP'>{pokeDetails.Vida}</h3></div>
                                             :
-                                            <div className='contChart'><h3 className='stats'> HP: </h3> <h3 className='chart' style={{ width: pokeDetails[0].hp }}>{pokeDetails[0].hp}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails[0].hp }}>HP:</h3> <h3 className='statHP'>  {pokeDetails[0].hp}</h3></div>
                                     }
                                     {
                                         pokeDetails.Fuerza ?
-                                            <div className='contChart'><h3 className='stats'> Force: {pokeDetails.Fuerza}</h3> <h3 className='chart' style={{ width: pokeDetails.Fuerza }}>{pokeDetails.Fuerza}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails.Fuerza }}>FORCE:</h3> <h3 className='statForce'> {pokeDetails.Fuerza}</h3></div>
                                             :
-                                            <div className='contChart'><h3 className='stats'> Force: </h3> <h3 className='chart' style={{ width: pokeDetails[0].force }}>{pokeDetails[0].force}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails[0].force }}>FORCE:</h3> <h3 className='statForce'> {pokeDetails[0].force}</h3></div>
                                     }
                                     {
                                         pokeDetails.Defensa ?
-                                            <div className='contChart'><h3 className='stats'> Defense: {pokeDetails.Defensa}</h3> <h3 className='chart' style={{ width: pokeDetails.Defensa }}>{pokeDetails.Defensa}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails.Defensa }}>DEFENSE:</h3> <h3 className='statDefense'>{pokeDetails.Defensa}</h3></div>
                                             :
-                                            <div className='contChart'><h3 className='stats'> Defense: </h3> <h3 className='chart' style={{ width: pokeDetails[0].defense }}>{pokeDetails[0].defense}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails[0].defense }}>DEFENSE:</h3> <h3 className='statDefense'> {pokeDetails[0].defense}</h3></div>
                                     }
                                     {
                                         pokeDetails.Velocidad ?
-                                            <div className='contChart'><h3 className='stats'> Speed: {pokeDetails.Velocidad}</h3> <h3 className='chart' style={{ width: pokeDetails.Velocidad }}>{pokeDetails.Velocidad}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails.Velocidad }}>SPEED: </h3> <h3 className='statSpeed'>{pokeDetails.Velocidad} </h3></div>
                                             :
-                                            <div className='contChart'><h3 className='stats'> Speed: </h3> <h3 className='chart' style={{ width: pokeDetails[0].speed }}>{pokeDetails[0].speed}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails[0].speed }}>SPEED: </h3> <h3 className='statSpeed'>{pokeDetails[0].speed} </h3></div>
                                     }
                                     {
                                         pokeDetails.Altura ?
-                                            <div className='contChart'><h3 className='stats'> Height: {pokeDetails.Peso}</h3> <h3 className='chart' style={{ width: pokeDetails.Altura }}>{pokeDetails.Altura}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails.Altura }}>HEIGHT: </h3> <h3 className='statHeight'>{pokeDetails.Altura} </h3></div>
                                             :
-                                            <div className='contChart'><h3 className='stats'> Height: </h3> <h3 className='chart' style={{ width: pokeDetails[0].height }}>{pokeDetails[0].height}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails[0].height }}>HEIGHT: </h3> <h3 className='statHeight'>{pokeDetails[0].height} </h3></div>
                                     }
                                     {
                                         pokeDetails.Peso ?
-                                            <div className='contChart'><h3 className='stats'> Weight: {pokeDetails.Peso}</h3> <h3 className='chart' style={{ width: pokeDetails.Peso }}>{pokeDetails.Peso}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails.Peso }}>WEIGHT: </h3> <h3 className='statWeight'>{pokeDetails.Peso} </h3></div>
                                             :
-                                            <div className='contChart'><h3 className='stats'> Weight: </h3> <h3 className='chart' style={{ width: 255 }}>{pokeDetails[0].weight}</h3></div>
+                                            <div className='contChart'> <h3 className='chart' style={{ width: pokeDetails[0].weight }}>WEIGHT: </h3> <h3 className='statWeight'>{pokeDetails[0].weight} </h3></div>
                                     }
                                 </div>
                             </div>

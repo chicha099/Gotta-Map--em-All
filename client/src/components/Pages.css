@@ -19,12 +19,18 @@
 }
 
 .Page:hover {
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
     background-color: #EB5E0B;
     color: whitesmoke;
     border: 1px solid transparent;
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
+}
+
+.Page:active {
+    transition-duration: 0.1;
+    width: 27px;
+    height: 27px;
 }
 
 .footer {
