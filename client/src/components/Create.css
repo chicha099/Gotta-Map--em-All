@@ -61,7 +61,6 @@
 }
 
 .statsForm {
-    background-color: whitesmoke;
     width: 20%;
     padding-bottom: 0.5%;
     margin-left: 2%;
@@ -74,7 +73,8 @@
     color: whitesmoke;
 }
 .formStatsImg {
-    background-color: blanchedalmond;
+    background-color: rgb(209, 209, 209);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
+

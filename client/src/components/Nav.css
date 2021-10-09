@@ -14,14 +14,20 @@
     height: 70%;
     align-self: center;
     font-family: gba;
+    margin-right: 4%;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 }
 
 .ButtonNav {
-    height: 78%;
+    height: 4%;
     align-self: center;
-    margin-right: 3%;
-    font-family: gba;
+    right: 33px;
     cursor: pointer;
+    position: fixed;
+}
+
+.ButtonNav:active {
+    height: 3.7%;
 }
 
 .Logo {

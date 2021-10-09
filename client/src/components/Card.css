@@ -6,7 +6,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 3% 3% 3% 3%;
-    border-radius: 10%;
+    border-radius: 5%;
     justify-content: center;
     align-content: center;
     padding-top: 0.8%;
@@ -20,7 +20,7 @@
 .Img {
     width: 200px;
     height: 200px;
-    border-radius: 10%;
+    border-radius: 5%;
     background-color: whitesmoke;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -33,9 +33,14 @@
 }
 
 .Card:hover {
-    border-radius: 10%;
+    /* border-radius: 10%; */
     border: 2px solid transparent;
     cursor: pointer;
+}
+
+.Img:active {
+    height: 160px;
+    width: 160px;
 }
 
 .cardDiv {

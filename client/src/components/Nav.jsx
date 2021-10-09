@@ -40,14 +40,10 @@ export default function Nav() {
             <input
                 type='text'
                 className='Input'
-                placeholder='Search...'
+                placeholder=' Search...'
                 onChange={(e) => handleInputChange(e)}
             />
-            <button
-                className='ButtonNav'
-                type='submit'
-                onClick={(e) => handleSubmit(e)}
-            >SEARCH</button>
+            <img src="./img/loupe.png" alt="" className='ButtonNav'  onClick={(e) => handleSubmit(e)}/>
         </div>
     )
 };

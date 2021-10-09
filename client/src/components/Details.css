@@ -10,8 +10,8 @@
     background-color: #F8F1F1;
     width: 375px;
     height: 600px;
-    border-radius: 4%;
-    border: 1px solid black;
+    border-radius: 3%;
+    border: 1px solid #2e2e2e;
     box-shadow: 10px 10px 23px -7px rgba(0,0,0,0.51);
 }
 
@@ -27,8 +27,9 @@
     display: flex;
     justify-content: center;
     background-color: blanchedalmond;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .imgDetailDiv {
@@ -100,16 +101,22 @@
 
 .pokeNameDet {
     margin-top: 5%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 #pokeTypeDet1 {
     font-size: 25px;
     margin-left: 38%;
+text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 #pokeTypeDet2 {
     font-size: 25px;
     margin-left: 30%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 #normal {
@@ -205,40 +212,54 @@
     padding-left: 10px;
     display: flex;
     flex-direction: row;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 .contChart {
     display: flex;
     margin-left: 5%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .statHP {
     position: fixed;
     left: 44.5%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 .statForce {
     position: fixed;
-    left: 46.2%
+    left: 46.2%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 .statDefense {
     position: fixed;
-    left: 47.4%
+    left: 47.4%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 .statSpeed {
     position: fixed;
-    left: 46.2%
+    left: 46.2%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 .statWeight {
     position: fixed;
-    left: 46.9%
+    left: 46.9%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
 
 .statHeight {
     position: fixed;
-    left: 46.6%
+    left: 46.6%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+color: #2e2e2e;
 }
