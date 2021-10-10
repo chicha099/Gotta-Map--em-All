@@ -75,17 +75,13 @@
     border-radius: 50px;
     width: 90px;
     height: 90px;
-    /* color: transparent; */
     transition-duration: 500ms;
-    /* background-image: url("https://www.pngitem.com/pimgs/m/165-1653316_great-ball-pokemon-png-transparent-png.png"); */
-    border: 1px solid transparent;
-    /* background-size: 146%;
-    background-position-x: -20px;
-    background-position-y: -11px; */
+    border: 0.5px outset black;
     font-size: 0px;
     box-shadow: 0px 0px 10px 10px rgb(255, 255, 255);
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+    /* -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite; */
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset;
 }
 
 .Button:hover:after {
@@ -93,7 +89,7 @@
     font-size: 40px;
 }
 
-@-webkit-keyframes spin {
+/* @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
   }
@@ -101,8 +97,5 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+  } */
 
-.Button:active {
-
-}

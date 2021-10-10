@@ -71,7 +71,6 @@ export default function Home() {
                                             let imgDb = p.Imagen;
                                             let idDb = p.ID;
                                             p.tipos.forEach(t => {
-
                                                 typesDb.push(t.name)
                                             });
                                             return (

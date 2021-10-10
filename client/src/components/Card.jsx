@@ -22,7 +22,7 @@ export default function Card({ name, types, img, id }) {
     return (
         <span onClick={() => handlePopup([true, id])}>
             <div className='cardDiv'>
-                <div className='Card'>
+                <div className='Card' id={type1F.toLowerCase()}>
                     <img src={img} alt="img not found" className='Img' />
                     <h5 className='demotext'>{nameF}</h5>
                     <h6 className='demotext'>{type1F} {type2}</h6>

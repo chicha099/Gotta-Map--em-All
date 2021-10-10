@@ -35,7 +35,7 @@ export default function Sidebar() {
                                 <div>
                                     <button id={typeF} name="filters" value={t.name} className='ButtonFilterTypes' onClick={e => handleFilterTypes(e)} />
                                 </div>
-                                <label for={typeF} className='Label'>{typeF}</label>
+                                <label  id={typeF.toLowerCase()} for={typeF} className='Label'>{typeF}</label>
                             </div>
                         )
                     })

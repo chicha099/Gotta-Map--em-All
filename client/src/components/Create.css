@@ -53,7 +53,16 @@
     height: 40px;
     font-family: gba;
     font-size: large;
+    border: 0xp solid transparent;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 }
+
+.buttonCreate:hover {
+    width: 20%;
+    height: 42px;
+    margin-left: 8%;
+}
+
 
 .formPrincipal {
     display: flex;
@@ -65,16 +74,21 @@
     padding-bottom: 0.5%;
     margin-left: 2%;
     margin-top: 1%;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    color: #2e2e2e;
     border: 1px solid black;
     border-radius: 1%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .noName{
     color: whitesmoke;
+    text-shadow: -1px -1px 1px whitesmoke, 1px 1px 1px whitesmoke;
 }
 .formStatsImg {
     background-color: rgb(209, 209, 209);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    
 }
 

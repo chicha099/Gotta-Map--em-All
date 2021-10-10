@@ -34,8 +34,8 @@
     display: flex;
     align-self: center;
     margin-right: 10%;
-    width: 6%;
-    height: 80%;
+    width: 35px;
+    height: 35px;
     color: whitesmoke;
     font-family: gba;
 }
@@ -44,6 +44,7 @@
     display: flex;
     justify-self: center;
     align-self: center;
+    margin-left: 10%;
 }
 
 .CreateNav {
@@ -51,7 +52,18 @@
     color: whitesmoke;
     justify-self: center;
     align-self: center;
-    margin-right: 25%;
+    margin-right: 3%;
+    flex-direction: row;
+    column-gap: 5%;
+    font-family: gba;
+}
+
+.AboutNav {
+    display: flex;
+    color: whitesmoke;
+    justify-self: center;
+    align-self: center;
+    margin-right: 52%;
     flex-direction: row;
     column-gap: 5%;
     font-family: gba;

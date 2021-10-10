@@ -25,7 +25,7 @@ export default function Nav() {
         <div className='NavDiv'>
 
             <Link to='/home' className='Logo'>
-                <img src="./img/pokelogo.png" alt="" />
+                <img src="./img/pokelogo2.png" alt="" />
                 <div className='TitleNav'>
                     <h2>HENRY</h2>
                 </div>
@@ -34,7 +34,7 @@ export default function Nav() {
                 <h2> Create </h2>
                 <h2> Pokemon </h2>
             </Link>
-            <Link to='/about' className='CreateNav'>
+            <Link to='/about' className='AboutNav'>
                 <h2>About</h2>
             </Link>
             <input
