@@ -9,7 +9,7 @@
     padding-bottom: 0.5%;
     background-color: #2e2e2e;
     max-width: 349px;
-    border-radius: 1%;
+    border-radius: 5px;
     /* border: 10px ridge #EB5E0B; */
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
