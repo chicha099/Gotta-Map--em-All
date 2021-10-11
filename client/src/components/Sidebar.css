@@ -104,3 +104,11 @@
     color: #e0dfdc;
     letter-spacing: 5px;
 }
+
+.line {
+    position: fixed;
+    color: #fff;
+    top: 818px;
+    left: 225px;
+    opacity: 50%;
+}

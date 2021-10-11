@@ -47,6 +47,11 @@
     margin-left: 10%;
 }
 
+.TitleNav:hover {
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    color: #FFFFFF;
+}
+
 .CreateNav {
     display: flex;
     color: whitesmoke;
@@ -56,6 +61,11 @@
     flex-direction: row;
     column-gap: 5%;
     font-family: gba;
+}
+
+.CreateNav:hover {
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    color: #FFFFFF;
 }
 
 .AboutNav {
@@ -68,3 +78,9 @@
     column-gap: 5%;
     font-family: gba;
 }
+
+.AboutNav:hover {
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+    color: #FFFFFF;
+}
+

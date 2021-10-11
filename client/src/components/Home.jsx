@@ -43,7 +43,7 @@ export default function Home() {
                     <div id='main' className='MainDiv'>
                         <Sidebar />
                         <div className='fixPages'>
-                            <div className='selectHome'>
+                            <div className='selectHome' >
                                 <select onChange={e => handleOrderByName(e)} className='Font'>
                                     <option value="" selected disabled hidden>Sort</option>
                                     <option className='optionsHome' value="alpha-Asc">A-Z</option>

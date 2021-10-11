@@ -1,8 +1,9 @@
 .Landing {
     height: 100vh;
     width: 100vw;
-    background-image: url('https://free4kwallpapers.com/uploads/originals/2018/06/18/created-a-3d-render-of-a-pokemon-trophy-in-the-grass-wallpaper.jpg');
+    background-image: url('https://i.ibb.co/vj0MDSy/finalback.png');
     background-size: 100%;
+    background-position-y: -50px;
     display: flex;
     flex-direction: column;
 }
@@ -45,8 +46,22 @@
     top: -30px;
     cursor: pointer;
     text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4bdbff, 0 0 30px #4bdbff, 0 0 40px #4bdbff, 0 0 55px #4bdbff, 0 0 75px #4bdbff;
-color: #FFFFFF;
+    color: #FFFFFF;
    }
+
+.hiddenImage {
+/* display: none; */
+position: fixed;
+width: 100px;
+height: 100px;
+left: 630px;
+top: 250px;
+}
+
+.hiddenImage:hover {
+    display: block;
+}
+
 
 .hideTitle{
     color: transparent;
@@ -81,14 +96,16 @@ color: #FFFFFF;
     border: 0.5px outset black;
     font-size: 0px;
     box-shadow: 10px 0px 10px 10px rgb(255, 255, 255);
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+    /* -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite; */
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset;
+    border: 0px solid transparent;
 }
 
 .Button:hover:after {
     content: 'GO!';
     font-size: 40px;
+    border: 0px solid transparent;
     /* color: #FFFFFF; */
 /* background: #232323; */
 /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4bdbff, 0 0 30px #4bdbff, 0 0 40px #4bdbff, 0 0 55px #4bdbff, 0 0 75px #4bdbff; */
