@@ -29,7 +29,7 @@
     padding-bottom: 5%;
     color: white;
     font-size: xx-large;
-    -webkit-text-stroke: 1px black;
+    -webkit-text-stroke: 1px #FFFFFF;
     display: flex;
     justify-content: center;
 }
@@ -44,6 +44,8 @@
 .landingTitle:hover {
     top: -30px;
     cursor: pointer;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4bdbff, 0 0 30px #4bdbff, 0 0 40px #4bdbff, 0 0 55px #4bdbff, 0 0 75px #4bdbff;
+color: #FFFFFF;
    }
 
 .hideTitle{
@@ -78,18 +80,23 @@
     transition-duration: 500ms;
     border: 0.5px outset black;
     font-size: 0px;
-    box-shadow: 0px 0px 10px 10px rgb(255, 255, 255);
-    /* -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite; */
+    box-shadow: 10px 0px 10px 10px rgb(255, 255, 255);
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset;
 }
 
 .Button:hover:after {
     content: 'GO!';
     font-size: 40px;
+    /* color: #FFFFFF; */
+/* background: #232323; */
+/* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4bdbff, 0 0 30px #4bdbff, 0 0 40px #4bdbff, 0 0 55px #4bdbff, 0 0 75px #4bdbff; */
+/* color: #FFFFFF; */
+/* background: #232323; */
 }
 
-/* @-webkit-keyframes spin {
+@-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(360deg); }
   }
@@ -97,5 +104,5 @@
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  } */
+  }
 
