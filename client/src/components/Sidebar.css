@@ -1,5 +1,4 @@
 .SidebarDiv {
-    /* border: 1px solid black; */
     width: 30vw;
     margin: 0 0 0 0.5%;
     display: flex;
@@ -10,7 +9,6 @@
     background-color: #2e2e2e;
     max-width: 349px;
     border-radius: 5px;
-    /* border: 10px ridge #EB5E0B; */
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
@@ -34,8 +32,6 @@
 
 .ButtonFilterTypes:hover {
     transition-duration: 300ms;
-    /* width: 25px; */
-    /* height: 25px; */
 }
 
 .ButtonFilterTypes:active {
@@ -57,8 +53,6 @@
 
 .ButtonFilterOther:hover {
     transition-duration: 300ms;
-    /* width: 25px;
-    height: 25px; */
 }
 
 .ButtonFilterOther:active {
@@ -70,7 +64,6 @@
 .Filter2 {
     margin-left: 4%;
     display: flex;
-    /* justify-content: center;*/
     align-content: center; 
     font-family: gba;
     font-size: large;

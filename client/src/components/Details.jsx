@@ -96,7 +96,6 @@ export default function Details() {
                 </div>
             ) : (
                 <div>
-                    {/* <h1>ESTOY CARGANDO</h1> */}
                     <img src="https://media3.giphy.com/media/IQebREsGFRXmo/200.gif" alt="" />
                 </div>
             )}

@@ -126,10 +126,6 @@ router.get("/:id", (req, res) => {
             });
     }
     else {
-        // Pokemon.findByPk(id)
-        //     .then(resp => {
-        //         return res.json(resp);
-        //     })
         Pokemon.findOne({
             where: { ID: id },
             include: {

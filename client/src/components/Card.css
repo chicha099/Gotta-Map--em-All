@@ -1,5 +1,4 @@
 .Card {
-    /* border: 1px solid black; */
     width: 100%;
     background-color: #EB5E0B;
     display: flex;
@@ -33,7 +32,6 @@
 }
 
 .Card:hover {
-    /* border-radius: 10%; */
     border: 2px solid transparent;
     cursor: pointer;
 }

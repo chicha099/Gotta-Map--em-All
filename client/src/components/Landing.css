@@ -47,27 +47,13 @@
     cursor: pointer;
     text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4bdbff, 0 0 30px #4bdbff, 0 0 40px #4bdbff, 0 0 55px #4bdbff, 0 0 75px #4bdbff;
     color: #FFFFFF;
-   }
-
-.hiddenImage {
-/* display: none; */
-position: fixed;
-width: 100px;
-height: 100px;
-left: 630px;
-top: 250px;
 }
-
-.hiddenImage:hover {
-    display: block;
-}
-
 
 .hideTitle{
     color: transparent;
     -webkit-text-stroke: 1px transparent;
     cursor: default;
-   }
+}
 
 .ButtonDiv {
     display: inline-block;
@@ -76,7 +62,6 @@ top: 250px;
     height: 10%;
     width: 20%;
     margin: 0 auto 0 auto;
-    /* border: 1px double black; */
 }
 
 .Button {
@@ -96,8 +81,6 @@ top: 250px;
     border: 0.5px outset black;
     font-size: 0px;
     box-shadow: 10px 0px 10px 10px rgb(255, 255, 255);
-    /* -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite; */
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset;
     border: 0px solid transparent;
 }
@@ -106,11 +89,6 @@ top: 250px;
     content: 'GO!';
     font-size: 40px;
     border: 0px solid transparent;
-    /* color: #FFFFFF; */
-/* background: #232323; */
-/* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #4bdbff, 0 0 30px #4bdbff, 0 0 40px #4bdbff, 0 0 55px #4bdbff, 0 0 75px #4bdbff; */
-/* color: #FFFFFF; */
-/* background: #232323; */
 }
 
 @-webkit-keyframes spin {

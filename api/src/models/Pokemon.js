@@ -32,10 +32,6 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    // Tipos: {
-    //   type: DataTypes.JSON,
-    //   allowNull: false,
-    // },
     Imagen: {
       type: DataTypes.TEXT,
       allowNull: false,
