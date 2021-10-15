@@ -12,15 +12,15 @@ export default function Detail() {
     const dispatch = useDispatch();
     const allTypes = useSelector((state) => state.types);
     const [errors, setErrors] = useState({
-        Nombre: '',
-        Tipos: '',
-        Imagen: '',
-        Vida: '',
-        Fuerza: '',
-        Defensa: '',
-        Velocidad: '',
-        Peso: '',
-        Altura: ''
+        Nombre: '!',
+        Tipos: '!',
+        Imagen: '!',
+        Vida: '!',
+        Fuerza: '!',
+        Defensa: '!',
+        Velocidad: '!',
+        Peso: '!',
+        Altura: '!'
     });
 
     console.log(allTypes)
