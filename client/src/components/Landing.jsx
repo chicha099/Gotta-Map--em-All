@@ -14,19 +14,16 @@ export default function LandingPage() {
                         <h1 className='landingTitle'>T</h1>
                         <h1 className='landingTitle'>A</h1>
                     </div>
-                    {/* <h1 className='hideTitle'>.</h1> */}
                     <div className='eachWord'>
                         <h1 className='landingTitle'>M</h1>
                         <h1 className='landingTitle'>A</h1>
                         <h1 className='landingTitle'>P</h1>
                     </div>
-                    {/* <h1 className='hideTitle'>.</h1> */}
                     <div className='eachWord'>
                         <h1 className='landingTitle'>'</h1>
                         <h1 className='landingTitle'>E</h1>
                         <h1 className='landingTitle'>M</h1>
                     </div>
-                    {/* <h1 className='hideTitle'>.</h1> */}
                     <div className='eachWord'>
                         <h1 className='landingTitle'>A</h1>
                         <h1 className='landingTitle'>L</h1>
