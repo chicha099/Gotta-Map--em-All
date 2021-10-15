@@ -22,8 +22,6 @@ export default function Details() {
         dispatch(changePopup(bool))
     }
 
-
-    console.log(pokeDetails)
     return (
         <div className='allDet'>
             <div className='darken'></div>

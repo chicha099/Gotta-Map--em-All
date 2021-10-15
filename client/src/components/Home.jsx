@@ -15,6 +15,7 @@ export default function Home() {
     const allPokemons = useSelector((state) => state.pokemons);
     const popupState = useSelector((state) => state.popup);
     const allTypes = useSelector((state) => state.types);
+    
     const currentPage = useSelector((state) => state.page);
     const pokemonsPerPage = 9;
     const lastPokemonIndex = currentPage * pokemonsPerPage;

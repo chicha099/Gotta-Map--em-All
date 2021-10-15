@@ -10,13 +10,13 @@ export default function About() {
             <div className='mainAbout'>
                 <h1>About Me</h1>
                 <div>
-                    <p>This is the about us route</p>
+                    <p>This is the about me route</p>
                 </div>
                 <div>
                     <a href="https://github.com/chicha099" target='_blank'>
                         <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Emblem.png" alt="" width='7%' />
                     </a>
-                    <a href="https://www.linkedin.com/in/seraf%C3%ADn-dericks-a4784a155/" target='_blank'>
+                    <a href="https://www.linkedin.com/in/seraf%C3%ADn-dericks-a4784a155/" target='_blank' className='aboutLogo'>
                         <img src="https://1000marcas.net/wp-content/uploads/2020/01/Logo-Linkedin.png" alt="" width='7%' />
                     </a>
                 </div>

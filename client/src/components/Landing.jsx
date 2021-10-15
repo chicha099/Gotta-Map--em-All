@@ -7,23 +7,31 @@ export default function LandingPage() {
         <div className='Landing'>
             <div className='Container'>
                 <div className='Title'>
-                    <h1 className='landingTitle'>G</h1>
-                    <h1 className='landingTitle'>O</h1>
-                    <h1 className='landingTitle'>T</h1>
-                    <h1 className='landingTitle'>T</h1>
-                    <h1 className='landingTitle'>A</h1>
-                    <h1 className='hideTitle'>.</h1>
-                    <h1 className='landingTitle'>M</h1>
-                    <h1 className='landingTitle'>A</h1>
-                    <h1 className='landingTitle'>P</h1>
-                    <h1 className='hideTitle'>.</h1>
-                    <h1 className='landingTitle'>'</h1>
-                    <h1 className='landingTitle'>E</h1>
-                    <h1 className='landingTitle'>M</h1>
-                    <h1 className='hideTitle'>.</h1>
-                    <h1 className='landingTitle'>A</h1>
-                    <h1 className='landingTitle'>L</h1>
-                    <h1 className='landingTitle'>L</h1>
+                    <div className='eachWord'>
+                        <h1 className='landingTitle'>G</h1>
+                        <h1 className='landingTitle'>O</h1>
+                        <h1 className='landingTitle'>T</h1>
+                        <h1 className='landingTitle'>T</h1>
+                        <h1 className='landingTitle'>A</h1>
+                    </div>
+                    {/* <h1 className='hideTitle'>.</h1> */}
+                    <div className='eachWord'>
+                        <h1 className='landingTitle'>M</h1>
+                        <h1 className='landingTitle'>A</h1>
+                        <h1 className='landingTitle'>P</h1>
+                    </div>
+                    {/* <h1 className='hideTitle'>.</h1> */}
+                    <div className='eachWord'>
+                        <h1 className='landingTitle'>'</h1>
+                        <h1 className='landingTitle'>E</h1>
+                        <h1 className='landingTitle'>M</h1>
+                    </div>
+                    {/* <h1 className='hideTitle'>.</h1> */}
+                    <div className='eachWord'>
+                        <h1 className='landingTitle'>A</h1>
+                        <h1 className='landingTitle'>L</h1>
+                        <h1 className='landingTitle'>L</h1>
+                    </div>
                 </div>
                 <div className='ButtonDiv'>
                     <Link to='/home'>
@@ -31,6 +39,6 @@ export default function LandingPage() {
                     </Link>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

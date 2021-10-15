@@ -27,12 +27,13 @@
 
 .Title {
     font-family: gba;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     color: white;
     font-size: xx-large;
     -webkit-text-stroke: 1px #FFFFFF;
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 .landingTitle {
@@ -53,6 +54,11 @@
     color: transparent;
     -webkit-text-stroke: 1px transparent;
     cursor: default;
+}
+
+.eachWord {
+    display: flex;
+    margin-left: 0.8%;
 }
 
 .ButtonDiv {
